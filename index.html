@@ -410,12 +410,22 @@
 									Rạp</a>
 							</li>
 							<li><a title="Trailer" href="https://ephimmoi.net/phim-sap-chieu/">Trailer</a></li>
+							<li id="sign_in">
+								<button class="sign_in_button">Đăng nhập</button>
+							</li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-3"></div>
 			</div>
 		</nav>
+		<script>
+			$(document).ready(function(){
+				$('.sign_in_button').click(function(){
+					$('#sign_in').html('<a>Đã đăng nhập</a>')
+				})
+			})
+		</script>
 		<div class="content_body">
 			<div class="row">
 				<div class="col-lg-3">
@@ -513,6 +523,75 @@
 									</div>
 								</div>
 							</div>
+							<!-- Button trigger modal -->
+							<!-- Modal -->
+							<div class="modal fade copy_modal" id="modelCopy" tabindex="-1" role="dialog"
+								aria-labelledby="modelTitleId" aria-hidden="true">
+								<div class="modal-dialog" role="document">
+									<div class="modal-content">
+										<div class="modal-header">
+											<h5 class="modal-title">Copy</h5>
+											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+												<span aria-hidden="true">&times;</span>
+											</button>
+										</div>
+										<div class="modal-body">
+											<div class="form-group">
+												<label for="short_link">Link rút gọn</label>
+												<input type="text" class="form-control" name="short_link"
+													id="short_link" aria-describedby="helpId" placeholder=""
+													value="https://motchill.net/xem-phim/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
+													disabled>
+												<button class="copy_button" onclick="copy_short_link()"><img
+														src="./img/copy_icon.png" alt=""></button>
+											</div>
+											<div class="form-group">
+												<label for="link_film">Link film</label>
+												<input type="text" class="form-control" name="link_film" id="link_film"
+													aria-describedby="helpId" placeholder=""
+													value="https://motchill.net/xem-phim.html" disabled>
+												<button class="copy_button" onclick="copy_link()"><img
+														src="./img/copy_icon.png" alt=""></button>
+											</div>
+										</div>
+										<div class="modal-footer">
+											<button type="button" class="btn btn-secondary"
+												data-dismiss="modal">Close</button>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<script>
+								function copy_short_link() {
+									/* Get the text field */
+									var copyText = document.getElementById("short_link");
+
+									/* Select the text field */
+									copyText.select();
+									copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+									/* Copy the text inside the text field */
+									navigator.clipboard.writeText(copyText.value);
+
+									/* Alert the copied text */
+									alert("Copied the text: " + copyText.value);
+								}
+								function copy_link() {
+									/* Get the text field */
+									var copyText = document.getElementById("link_film");
+
+									/* Select the text field */
+									copyText.select();
+									copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+									/* Copy the text inside the text field */
+									navigator.clipboard.writeText(copyText.value);
+
+									/* Alert the copied text */
+									alert("Copied the text: " + copyText.value);
+								}
+							</script>
 							<!-- Tab content -->
 							<div id="Tab1" class="tabcontent active">
 								<div class="item_film">
@@ -528,7 +607,10 @@
 												<img src="./img/star_rank.png" alt="">
 												<p>#adndnd, #kdjsfj, #kgkdg, ...</p>
 												<div class="right_ver">
-													<button>Copy link</button>
+													<button type="button" class="" data-toggle="modal"
+														data-target="#modelCopy">
+														Copy link
+													</button>
 												</div>
 											</div>
 										</div>
@@ -613,7 +695,10 @@
 												<img src="./img/star_rank.png" alt="">
 												<p>#adndnd, #kdjsfj, #kgkdg, ...</p>
 												<div class="right_ver">
-													<button>Copy link</button>
+													<button type="button" class="" data-toggle="modal"
+														data-target="#modelCopy">
+														Copy link
+													</button>
 												</div>
 											</div>
 										</div>
@@ -673,7 +758,10 @@
 												<img src="./img/star_rank.png" alt="">
 												<p>#adndnd, #kdjsfj, #kgkdg, ...</p>
 												<div class="right_ver">
-													<button>Copy link</button>
+													<button type="button" class="" data-toggle="modal"
+														data-target="#modelCopy">
+														Copy link
+													</button>
 												</div>
 											</div>
 										</div>
@@ -790,11 +878,6 @@
 				</div>
 				<div class="col-lg-2 quang_cao">
 					<div id="carouselId" class="carousel slide" data-ride="carousel">
-						<ol class="carousel-indicators">
-							<li data-target="#carouselId" data-slide-to="0" class="active"></li>
-							<li data-target="#carouselId" data-slide-to="1"></li>
-							<li data-target="#carouselId" data-slide-to="2"></li>
-						</ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="carousel-item active">
 								<img src="./img/quangcao.png" alt="">
@@ -956,8 +1039,8 @@
 		<script>
 			$(document).ready(function () {
 				$('#carouselId').owlCarousel({
-					autoplay:true,
-					autoplayTimeout:10000
+					autoplay: true,
+					autoplayTimeout: 10000,
 					loop: true,
 					margin: 10,
 					responsive: {

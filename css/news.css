@@ -1,4 +1,9 @@
 body {overflow-x: hidden;}
+
+.sign_in_button { float: left; display: block;color: #fff; padding: 5px 10px; margin-top: 3px; text-decoration: none; border: none; background-color: #000; margin-top: 6px; margin-left: 30px; border: 2px solid #D4C946; text-transform: uppercase;}
+
+
+
 .content_body{font-family: 'Roboto';font-style: normal; background-color: #000;width: 100%; box-sizing: border-box;}
 .main_content_body{overflow-y: scroll; height: calc(100vh - 108px); box-sizing: border-box;}
 .main_content_body::-webkit-scrollbar{width: 0; display: none;}
@@ -33,7 +38,7 @@ body {overflow-x: hidden;}
 
 
 .top_popular h1{font-weight: 500;color: #FFFFFF;font-size: 36px; background-color: #A62125; height: 78px; text-align: center; align-items: center; display: flex; justify-content: center; margin: 0;}
-.popular_film {overflow: scroll; height: calc(100vh - 181px);padding: 5px;background-color: #fff;}
+.popular_film {overflow: scroll; height: calc(100vh - 181px);padding: 5px;background-color: #fff; overflow-x: hidden;}
 .popular_film .popular_film_item{position: relative; margin-bottom: 5px;}
 .popular_film .popular_film_item .sub_film{position: absolute;top: 0;left: 0; color:  #FFFFFF;font-size: 18px;line-height: 24px;padding: 0px 5px; background-color: #A62125;height: 25px;}
 .popular_film .popular_film_item .sub_film div{position: relative; z-index: 3;}
@@ -49,4 +54,9 @@ body {overflow-x: hidden;}
 .socal_media_button_chat{background-color: #483d8b00; border: none; outline: none;}
 .edit_modal .modal-dialog {min-width: 700px;}
 .edit_modal .modal-dialog .modal-body{height: 70vh; overflow-y: scroll;}
+
+.copy_modal .form-group{position: relative;}
+.copy_modal .form-group input {background-color: #C4C4C4 !important; color: #000 !important; padding: 30px; overflow-x: unset;}
+.copy_modal .form-group .copy_button {position: absolute; bottom:12px; right: 30px; height: 35px; width: 35px;background-color: #C4C4C4 !important; border: none;}
+.copy_modal .form-group .copy_button img {width: 100%;}
 /* .background_edit{background-color: black;} */
