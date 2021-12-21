@@ -47,4 +47,6 @@ body {overflow-x: hidden;}
 .quang_cao img {height: calc(100vh - 108px); padding-top: 10px; width: 100%;}
 
 .socal_media_button_chat{background-color: #483d8b00; border: none; outline: none;}
+.edit_modal .modal-dialog {min-width: 700px;}
+.edit_modal .modal-dialog .modal-body{height: 70vh; overflow-y: scroll;}
 /* .background_edit{background-color: black;} */
