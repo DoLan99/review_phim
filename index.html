@@ -93,6 +93,33 @@
 			background: url(https://ephimmoi.net/wp-content/plugins/wp-rocket/assets/img/youtube.png) no-repeat;
 			cursor: pointer
 		}
+		.popup {
+			display: none;
+			position: fixed;
+			padding-top: 50px;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgb(0, 0, 0);
+			background-color: rgba(0, 0, 0, 0.5);
+			}
+			.popup-content {
+			position: relative;
+			background-color: #FAFAFA;
+			padding: 15px;
+			margin: auto;
+			width: 70%;
+			}
+			.close-btn {
+			float: right;
+			color: #2E2E2E;
+			font-size: 25px;
+			font-weight: 700;
+			}
+			.close-btn:hover {
+			color: #D2D2D2;
+			}
 	</style>
 	<script type="text/javascript" src="js/halim-report.js" id="halim-report-js"></script>
 	<link rel="shortlink" href="https://ephimmoi.net/?p=51239">
@@ -484,8 +511,33 @@
 											<img src="./img/star_rank.png" alt="">
 											<p>#adndnd, #kdjsfj, #kgkdg, ...</p>
 											<div class="right_ver">
-												<button>Copy link</button>
+												<button id="popup-btn">Copy link</button>
 											</div>
+											<div class="popup">
+												<div class="popup-content">
+												<span class="close-btn">&times;</span>
+												<p>Bạn cần tư vấn hãy liên hệ với chúng tôi</p>
+												</div>
+											</div>
+											<script>
+												let modalBtn = document.getElementById("popup-btn");
+												let modal = document.querySelector(".popup");
+												let closeBtn = document.querySelector(".close-btn");
+												// Hiển thị popup khi nhấp chuột vào button
+												modalBtn.onclick = function(){
+												modal.style.display = "block"
+												}
+												// Đóng popup khi ấn vào nút đóng
+												closeBtn.onclick = function(){
+												modal.style.display = "none"
+												}
+												// Đóng khi nhấp chuột vào bất cứ khu vực nào trên màn hình
+												window.onclick = function(e){
+												if(e.target == modal){
+												modal.style.display = "none"
+												}
+												}
+											</script>
 										</div>
 									</div>
 								</div>
@@ -537,27 +589,7 @@
 											<img src="./img/star_rank.png" alt="">
 											<p>#adndnd, #kdjsfj, #kgkdg, ...</p>
 											<div class="right_ver">
-												<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Copy link</button>
-											</div>
-											<!-- Modal -->
-											<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-												<div class="modal-dialog" role="document">
-												<div class="modal-content">
-													<div class="modal-header">
-													<h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-													<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-														<span aria-hidden="true">&times;</span>
-													</button>
-													</div>
-													<div class="modal-body">
-													...
-													</div>
-													<div class="modal-footer">
-													<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-													<button type="button" class="btn btn-primary">Save changes</button>
-													</div>
-												</div>
-												</div>
+												<button>Copy link</button>
 											</div>
 										</div>
 									</div>
