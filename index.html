@@ -790,16 +790,21 @@
 				</div>
 				<div class="col-lg-2 quang_cao">
 					<div id="carouselId" class="carousel slide" data-ride="carousel">
+						<ol class="carousel-indicators">
+							<li data-target="#carouselId" data-slide-to="0" class="active"></li>
+							<li data-target="#carouselId" data-slide-to="1"></li>
+							<li data-target="#carouselId" data-slide-to="2"></li>
+						</ol>
 						<div class="carousel-inner" role="listbox">
 							<div class="carousel-item active">
 								<img src="./img/quangcao.png" alt="">
 							</div>
-							<!-- <div class="carousel-item">
+							<div class="carousel-item">
 								<img src="./img/quangcao.png" alt="">
 							</div>
 							<div class="carousel-item">
 								<img src="./img/quangcao.png" alt="">
-							</div> -->
+							</div>
 						</div>
 					</div>
 				</div>
@@ -948,6 +953,21 @@
 		</style>
 
 
+		<script>
+			$(document).ready(function () {
+				$('#carouselId').owlCarousel({
+					autoplay:true,
+					autoplayTimeout:10000
+					loop: true,
+					margin: 10,
+					responsive: {
+						600: {
+							items: 4
+						}
+					}
+				});
+			})
+		</script>
 		<script>
 			function openTab(evt, cityName) {
 				// Declare all variables
