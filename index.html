@@ -175,7 +175,9 @@
 		<link href="css/publicalle67d.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 		<link href="css/phim.css" rel="stylesheet">
-		<link href="css/bootstrap194c.css" rel="stylesheet" media="screen">
+		<!-- <link href="css/bootstrap194c.css" rel="stylesheet" media="screen"> -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 		<link rel="stylesheet" href="./css/news.css">
 		<script type="text/javascript" src="js/jquery.js"></script>
 		<script type="text/javascript" src="js/jquery-ui.min.js"></script>
@@ -492,65 +494,31 @@
 											</div>
 										</div>
 									</div>
-									<div class="body_content_item">
-										<iframe
-											src="https://www.youtube.com/embed/c-mILo5qZjc" title="YouTube video player"
-											frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-											allowfullscreen></iframe>
-										<div class="right_content_item col-lg-1">
-											<div class="pratice">
-												<h3>Tập</h3>
-												<ul class="pratice_item">
-													<li class="active">1</li>
-													<li>2</li>
-													<li>3</li>
-													<li>4</li>
-													<li>5</li>
-													<li>6</li>
-												</ul>
-											</div>
-										</div>
-										<div class="socal_media col-lg-1">
-											<ul>
-												<li class="active">
-													<div><img src="./img/like.png" alt=""></div>
-													<p>2002.1k</p>
-												</li>
-												<li>
-													<div><img src="./img/chat.png" alt=""></div>
-													<p>2002.1k</p>
-												</li>
-												<li>
-													<div><img src="./img/share.png" alt=""></div>
-													<p>2002.1k</p>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="item_film">
-									<div class="top_content_item">
-										<div class="item_top avar_film">
-											<img src="./img/shang-chi-va-huyen-thoai-thap-nhan-51239-thumbnail.jpg"
-												alt="">
-										</div>
-										<div class="item_top right_top">
-											<h1>Ăn Cơm Đã, Yêu Để Sau</h1>
-											<a href="">Link Full Film: https://motchill.net/xem-phim/bay-vi...</a>
-											<div class="top_star_hash">
-												<img src="./img/star_rank.png" alt="">
-												<p>#adndnd, #kdjsfj, #kgkdg, ...</p>
-												<div class="right_ver">
-													<button>Copy link</button>
+									<div class="modal fade background_edit" id="modelId" tabindex="-1" role="dialog"
+										aria-labelledby="modelTitleId" aria-hidden="true">
+										<div class="modal-dialog" role="document">
+											<div class="modal-content">
+												<div class="modal-header">
+													<h5 class="modal-title">Modal title</h5>
+													<button type="button" class="close" data-dismiss="modal"
+														aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
+												</div>
+												<div class="modal-body">
+													Body
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-secondary"
+														data-dismiss="modal">Close</button>
+													<button type="button" class="btn btn-primary">Save</button>
 												</div>
 											</div>
 										</div>
 									</div>
 									<div class="body_content_item">
-										<iframe
-											src="https://www.youtube.com/embed/c-mILo5qZjc" title="YouTube video player"
-											frameborder="0"
+										<iframe src="https://www.youtube.com/embed/c-mILo5qZjc"
+											title="YouTube video player" frameborder="0"
 											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 											allowfullscreen></iframe>
 										<div class="right_content_item col-lg-1">
@@ -568,73 +536,50 @@
 										</div>
 										<div class="socal_media col-lg-1">
 											<ul>
-												<li class="active">
+												<li class="active" onclick="like()">
 													<div><img src="./img/like.png" alt=""></div>
 													<p>2002.1k</p>
 												</li>
-												<li>
+												<li onclick="chat()">
 													<div><img src="./img/chat.png" alt=""></div>
 													<p>2002.1k</p>
 												</li>
 												<li>
-													<div><img src="./img/share.png" alt=""></div>
-													<p>2002.1k</p>
+													<button type="button" class="btn btn-primary btn-lg"
+														data-toggle="modal" data-target="#modelId">
+														Launch
+													</button>
+													<a href="https://facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/c-mILo5qZjc"
+														target="blank">
+														<div><img src="./img/share.png" alt=""></div>
+														<p>2002.1k</p>
+													</a>
 												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-								<div class="item_film">
-									<div class="top_content_item">
-										<div class="item_top avar_film">
-											<img src="./img/shang-chi-va-huyen-thoai-thap-nhan-51239-thumbnail.jpg"
-												alt="">
-										</div>
-										<div class="item_top right_top">
-											<h1>Ăn Cơm Đã, Yêu Để Sau</h1>
-											<a href="">Link Full Film: https://motchill.net/xem-phim/bay-vi...</a>
-											<div class="top_star_hash">
-												<img src="./img/star_rank.png" alt="">
-												<p>#adndnd, #kdjsfj, #kgkdg, ...</p>
-												<div class="right_ver">
-													<button>Copy link</button>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="body_content_item">
-										<iframe
-											src="https://www.youtube.com/embed/c-mILo5qZjc" title="YouTube video player"
-											frameborder="0"
-											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-											allowfullscreen></iframe>
-										<div class="right_content_item col-lg-1">
-											<div class="pratice">
-												<h3>Tập</h3>
-												<ul class="pratice_item">
-													<li class="active">1</li>
-													<li>2</li>
-													<li>3</li>
-													<li>4</li>
-													<li>5</li>
-													<li>6</li>
-												</ul>
-											</div>
-										</div>
-										<div class="socal_media col-lg-1">
-											<ul>
-												<li class="active">
-													<div><img src="./img/like.png" alt=""></div>
-													<p>2002.1k</p>
-												</li>
-												<li>
-													<div><img src="./img/chat.png" alt=""></div>
-													<p>2002.1k</p>
-												</li>
-												<li>
-													<div><img src="./img/share.png" alt=""></div>
-													<p>2002.1k</p>
-												</li>
+												<!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1"
+													role="dialog" aria-labelledby="exampleModalCenterTitle"
+													aria-hidden="true">
+													<div class="modal-dialog modal-dialog-centered" role="document">
+														<div class="modal-content">
+															<div class="modal-header">
+																<h5 class="modal-title" id="exampleModalLongTitle">Modal
+																	title</h5>
+																<button type="button" class="close" data-dismiss="modal"
+																	aria-label="Close">
+																	<span aria-hidden="true">&times;</span>
+																</button>
+															</div>
+															<div class="modal-body">
+																...
+															</div>
+															<div class="modal-footer">
+																<button type="button" class="btn btn-secondary"
+																	data-dismiss="modal">Close</button>
+																<button type="button" class="btn btn-primary">Save
+																	changes</button>
+															</div>
+														</div>
+													</div>
+												</div> -->
 											</ul>
 										</div>
 									</div>
@@ -661,9 +606,8 @@
 										</div>
 									</div>
 									<div class="body_content_item">
-										<iframe
-											src="https://www.youtube.com/embed/c-mILo5qZjc" title="YouTube video player"
-											frameborder="0"
+										<iframe src="https://www.youtube.com/embed/c-mILo5qZjc"
+											title="YouTube video player" frameborder="0"
 											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 											allowfullscreen></iframe>
 										<div class="right_content_item col-lg-1">
@@ -860,12 +804,8 @@
 				float: right
 			}
 		</style>
-		<!-- <div class="ad-container watch-banner-2" id="adtop-watch">
-    <div id="catfish" style="width: 100%;position:fixed;bottom:0;left:0;z-index:222" class="mp-adz">
-      <div style="margin:0 auto;text-align: center;overflow: visible;" id="container-ads">
-      </div>
-    </div>
-  </div> -->
+
+
 		<script>
 			function openTab(evt, cityName) {
 				// Declare all variables
@@ -910,7 +850,7 @@
 				}
 			});
 		</script>
-		<script>
+		<!-- <script>
 			jQuery('body').append('<div id="fb-root"></div>');
 			window.fbAsyncInit = function () {
 				FB.init({
@@ -924,7 +864,7 @@
 				}(document, 'script', 'facebook-jssdk'));
 			}
 			jQuery(window).load(function () { setTimeout("_loadFbSDk()", 100); });
-		</script>
+		</script> -->
 		<script type="text/javascript" src="js/play.8.8.2.js" id="halim-jwplayer-js"></script>
 		<script type="text/javascript" src="js/halimPlayer.js" id="halim-ajax-js"></script>
 		<script type="text/javascript" id="rocket-browser-checker-js-after">

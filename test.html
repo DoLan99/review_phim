@@ -1,0 +1,592 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <title>Title</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="css/publicalle67d.css" rel="stylesheet">
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="css/phim.css" rel="stylesheet">
+        <link rel="stylesheet" href="./css/news.css">
+    </head>
+
+    <body>
+        <div class="top-message"></div>
+        <header>
+            <div class="header row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="header-logo"><a class="logo" href="https://ephimmoi.net/" title="Phim Mới"><img
+                                src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%200%200&#x27;%3E%3C/svg%3E"
+                                data-lazy-src="https://ephimmoi.net/wp-content/uploads/2021/08/logo.png"><noscript><img
+                                    src="img/logo.png"></noscript></a></div>
+                    <div class="widget_search">
+                        <form method="GET" id="form-search" action="search/">
+                            <div><input type="text" name="keyword" placeholder="Tìm: tên phim, đạo diễn, diễn viên"
+                                    value onkeyup="onSearch(this.value)" id="searchkeyword" autocomplete="off"><input
+                                    id="searchsubmit" class value=" " type="submit"></div>
+                        </form>
+                        <div class="search-suggest" style="display: none;">
+                            <ul style="margin-bottom: 0;" id="search-suggest-list"></ul>
+                        </div>
+                    </div>
+                    <div class="widget_user_header"><a class="button-register" rel="nofollow" href="#"></a><a
+                            class="button-login" rel="nofollow" href="#"></a></div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </header>
+        <div class="clear"></div>
+
+        <head>
+            <meta name="theme-color" content="#f6a047">
+        </head>
+        <nav>
+            <div class="clear"></div>
+            <div class="row">
+                <div class="col-lg-3"></div>
+                <div class="col-lg-6">
+                    <div class="menu-menu-1-container">
+                        <ul id="mega-menu-1" class="menu">
+                            <li><a title="Phim Mới" href="https://ephimmoi.net/">Phim Mới</a></li>
+                            <li><a title="Thể Loại" href="#">Thể Loại</a>
+                                <ul>
+                                    <li><a title="Chiến Tranh" href="https://ephimmoi.net/category/chien-tranh/">Chiến
+                                            Tranh</a></li>
+                                    <li><a title="Cổ Trang" href="https://ephimmoi.net/category/co-trang/">Cổ Trang</a>
+                                    </li>
+                                    <li><a title="Gia Đình" href="https://ephimmoi.net/category/gia-dinh/">Gia Đình</a>
+                                    </li>
+                                    <li><a title="Hài Hước" href="https://ephimmoi.net/category/hai-huoc/">Hài Hước</a>
+                                    </li>
+                                    <li><a title="Hành Động" href="https://ephimmoi.net/category/hanh-dong/">Hành
+                                            Động</a>
+                                    </li>
+                                    <li><a title="Hình Sự" href="https://ephimmoi.net/category/hinh-su/">Hình Sự</a>
+                                    </li>
+                                    <li><a title="Võ Thuật" href="https://ephimmoi.net/category/vo-thuat/">Võ Thuật</a>
+                                    </li>
+                                    <li><a title="Kinh Dị" href="https://ephimmoi.net/category/kinh-di/">Kinh Dị</a>
+                                    </li>
+                                    <li><a title="Tâm Lý" href="https://ephimmoi.net/category/tam-ly/">Tâm Lý</a></li>
+                                    <li><a title="Viễn Tưởng" href="https://ephimmoi.net/category/vien-tuong/">Viễn
+                                            Tưởng</a></li>
+                                    <li><a title="Hoạt Hình" href="https://ephimmoi.net/category/hoat-hinh/">Hoạt
+                                            Hình</a>
+                                    </li>
+                                    <li><a title="Thần Thoại" href="https://ephimmoi.net/category/than-thoai/">Thần
+                                            Thoại</a></li>
+                                </ul>
+                            </li>
+                            <li><a title="Quốc Gia" href="#">Quốc Gia</a>
+                                <ul>
+                                    <li><a title="Việt Nam" href="https://ephimmoi.net/country/viet-nam/">Việt Nam</a>
+                                    </li>
+                                    <li><a title="Ấn Độ" href="https://ephimmoi.net/country/an-do/">Ấn Độ</a></li>
+                                    <li><a title="Hồng Kông" href="https://ephimmoi.net/country/hong-kong/">Hồng
+                                            Kông</a>
+                                    </li>
+                                    <li><a title="Nhật Bản" href="https://ephimmoi.net/country/nhat-ban/">Nhật Bản</a>
+                                    </li>
+                                    <li><a title="Thái Lan" href="https://ephimmoi.net/country/thai-lan/">Thái Lan</a>
+                                    </li>
+                                    <li><a title="Hàn Quốc" href="https://ephimmoi.net/country/han-quoc/">Hàn Quốc</a>
+                                    </li>
+                                    <li><a title="Trung Quốc" href="https://ephimmoi.net/country/trung-quoc/">Trung
+                                            Quốc</a>
+                                    </li>
+                                    <li><a title="Mỹ" href="https://ephimmoi.net/country/my/">Mỹ</a></li>
+                                    <li><a title="Singapore"
+                                            href="https://ephimmoi.net/country/singapore/">Singapore</a>
+                                    </li>
+                                    <li><a title="Đài Loan" href="https://ephimmoi.net/country/dai-loan/">Đài Loan</a>
+                                    </li>
+                                    <li><a title="Philippines"
+                                            href="https://ephimmoi.net/country/philippines/">Philippines</a></li>
+                                    <li><a title="Châu Âu" href="https://ephimmoi.net/country/chau-au/">Châu Âu</a></li>
+                                </ul>
+                            </li>
+                            <li><a title="Phim Lẻ" href="https://ephimmoi.net/phim-le/">Phim Lẻ</a>
+                                <ul>
+                                    <li><a title="Phim Lẻ 2021"
+                                            href="/filter-movies/sort/single_movies/status/country/2021/category/">Phim
+                                            Lẻ
+                                            2021</a></li>
+                                    <li><a title="Phim Lẻ 2020"
+                                            href="/filter-movies/sort/single_movies/status/country/2020/category/">Phim
+                                            Lẻ
+                                            2020</a></li>
+                                    <li><a title="Phim Lẻ 2019"
+                                            href="/filter-movies/sort/single_movies/status/country/2019/category/">Phim
+                                            Lẻ
+                                            2019</a></li>
+                                    <li><a title="Phim Lẻ 2018"
+                                            href="/filter-movies/sort/single_movies/status/country/2018/category/">Phim
+                                            Lẻ
+                                            2018</a></li>
+                                    <li><a title="Phim Lẻ 2017"
+                                            href="/filter-movies/sort/single_movies/status/country/2017/category/">Phim
+                                            Lẻ
+                                            2017</a></li>
+                                    <li><a title="Phim Lẻ 2016"
+                                            href="/filter-movies/sort/single_movies/status/country/2016/category/">Phim
+                                            Lẻ
+                                            2016</a></li>
+                                    <li><a title="Phim Lẻ 2015"
+                                            href="/filter-movies/sort/single_movies/status/country/2015/category/">Phim
+                                            Lẻ
+                                            2015</a></li>
+                                    <li><a title="Phim Lẻ 2014"
+                                            href="/filter-movies/sort/single_movies/status/country/2014/category/">Phim
+                                            Lẻ
+                                            2014</a></li>
+                                    <li><a title="Phim Lẻ 2013"
+                                            href="/filter-movies/sort/single_movies/status/country/2013/category/">Phim
+                                            Lẻ
+                                            2013</a></li>
+                                    <li><a title="Phim Lẻ 2012"
+                                            href="/filter-movies/sort/single_movies/status/country/2012/category/">Phim
+                                            Lẻ
+                                            2012</a></li>
+                                    <li><a title="Phim Lẻ 2011"
+                                            href="/filter-movies/sort/single_movies/status/country/2011/category/">Phim
+                                            Lẻ
+                                            2011</a></li>
+                                    <li><a title="Phim Lẻ 2010"
+                                            href="/filter-movies/sort/single_movies/status/country/2010/category/">Phim
+                                            Lẻ
+                                            2010</a></li>
+                                </ul>
+                            </li>
+                            <li><a title="Phim Bộ" href="https://ephimmoi.net/phim-bo/">Phim Bộ</a>
+                                <ul>
+                                    <li><a title="Phim Bộ Hàn Quốc"
+                                            href="/filter-movies/sort/tv_series/status/han-quoc/release/category/">Phim
+                                            Bộ
+                                            Hàn Quốc</a></li>
+                                    <li><a title="Phim Bộ Trung Quốc"
+                                            href="/filter-movies/sort/tv_series/status/trung-quoc/release/category/">Phim
+                                            Bộ
+                                            Trung Quốc</a></li>
+                                    <li><a title="Phim Bộ Đài Loan"
+                                            href="/filter-movies/sort/tv_series/status/dai-loan/release/category/">Phim
+                                            Bộ
+                                            Đài Loan</a></li>
+                                    <li><a title="Phim Bộ Hồng Kông"
+                                            href="/filter-movies/sort/tv_series/status/hong-kong/release/category/">Phim
+                                            Bộ
+                                            Hồng Kông</a></li>
+                                    <li><a title="Phim Bộ Mỹ"
+                                            href="/filter-movies/sort/tv_series/status/my/release/category/">Phim Bộ
+                                            Mỹ</a>
+                                    </li>
+                                    <li><a title="Phim Bộ Thái Lan"
+                                            href="/filter-movies/sort/tv_series/status/thai-lan/release/category/">Phim
+                                            Bộ
+                                            Thái Lan</a></li>
+                                    <li><a title="Phim Bộ Nhật Bản"
+                                            href="/filter-movies/sort/tv_series/status/nhat-ban/release/category/">Phim
+                                            Bộ
+                                            Nhật Bản</a></li>
+                                    <li><a title="Phim Bộ Ấn Độ"
+                                            href="/filter-movies/sort/tv_series/status/an-do/release/category/">Phim Bộ
+                                            Ấn Độ</a></li>
+                                    <li><a title="Phim Bộ Philippines"
+                                            href="/filter-movies/sort/tv_series/status/philippines/release/category/">Phim
+                                            Bộ Philippines</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a title="Phim Thuyết Minh" href="https://ephimmoi.net/ngon-ngu/thuyet-minh/">Phim
+                                    Thuyết
+                                    Minh</a></li>
+                            <li><a title="Phim Chiếu Rạp" href="https://ephimmoi.net/category/chieu-rap/">Phim Chiếu
+                                    Rạp</a>
+                            </li>
+                            <li><a title="Trailer" href="https://ephimmoi.net/phim-sap-chieu/">Trailer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3"></div>
+            </div>
+        </nav>
+        <div class="content_body">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="top_popular">
+                        <h1>Top thịnh hành</h1>
+                    </div>
+                    <div class="popular_film">
+                        <div class="popular_film_item">
+                            <div class="sub_film">
+                                <div>Tập Phụ Đề Anime HD Vietsub</div>
+                            </div>
+                            <img src="./img//pic_film1.png" alt="">
+                            <div class="content">
+                                <h3>Hiệp đạo nhất chi mai</h3>
+                                <p>God Omens(2019)</p>
+                            </div>
+                        </div>
+                        <div class="popular_film_item">
+                            <div class="sub_film">
+                                <div>Tập Phụ Đề Anime HD Vietsub</div>
+                            </div>
+                            <img src="./img//pic_film1.png" alt="">
+                            <div class="content">
+                                <h3>Hiệp đạo nhất chi mai</h3>
+                                <p>God Omens(2019)</p>
+                            </div>
+                        </div>
+                        <div class="popular_film_item">
+                            <div class="sub_film">
+                                <div>Tập Phụ Đề Anime HD Vietsub</div>
+                            </div>
+                            <img src="./img//pic_film1.png" alt="">
+                            <div class="content">
+                                <h3>Hiệp đạo nhất chi mai</h3>
+                                <p>God Omens(2019)</p>
+                            </div>
+                        </div>
+                        <div class="popular_film_item">
+                            <div class="sub_film">
+                                <div>Tập Phụ Đề Anime HD Vietsub</div>
+                            </div>
+                            <img src="./img//pic_film1.png" alt="">
+                            <div class="content">
+                                <h3>Hiệp đạo nhất chi mai</h3>
+                                <p>God Omens(2019)</p>
+                            </div>
+                        </div>
+                        <div class="popular_film_item">
+                            <div class="sub_film">
+                                <div>Tập Phụ Đề Anime HD Vietsub</div>
+                            </div>
+                            <img src="./img//pic_film1.png" alt="">
+                            <div class="content">
+                                <h3>Hiệp đạo nhất chi mai</h3>
+                                <p>God Omens(2019)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 main_content_body">
+                    <div class="row">
+                        <div class="col-lg-11">
+                            <div class="block-wrapper page-single block-note">Hãy truy cập PHIMMOI bằng tên miền mới của
+                                chúng
+                                tôi
+                                EPHIMMOI.NET.
+                                Xin cám ơn đã ủng hộ.</div>
+                            <div class="tab">
+                                <button class="tablinks active" onclick="openTab(event, 'Tab1')">Phim đề cử</button>
+                                <button class="tablinks" onclick="openTab(event, 'Tab2')">Phim mới</button>
+                            </div>
+
+                            <!-- Tab content -->
+                            <div id="Tab1" class="tabcontent active">
+                                <div class="item_film">
+                                    <div class="top_content_item">
+                                        <div class="item_top avar_film">
+                                            <img src="./img/shang-chi-va-huyen-thoai-thap-nhan-51239-thumbnail.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="item_top right_top">
+                                            <h1>Ăn Cơm Đã, Yêu Để Sau</h1>
+                                            <a href="">Link Full Film: https://motchill.net/xem-phim/bay-vi...</a>
+                                            <div class="top_star_hash">
+                                                <img src="./img/star_rank.png" alt="">
+                                                <p>#adndnd, #kdjsfj, #kgkdg, ...</p>
+                                                <div class="right_ver">
+                                                    <button>Copy link</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="modal fade background_edit" id="modelId" tabindex="-1" role="dialog"
+                                        aria-labelledby="modelTitleId" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Modal title</h5>
+                                                    <button type="button" class="close" data-dismiss="modal"
+                                                        aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    Body
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-secondary"
+                                                        data-dismiss="modal">Close</button>
+                                                    <button type="button" class="btn btn-primary">Save</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body_content_item">
+                                        <iframe src="https://www.youtube.com/embed/c-mILo5qZjc"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                        <div class="right_content_item col-lg-1">
+                                            <div class="pratice">
+                                                <h3>Tập</h3>
+                                                <ul class="pratice_item">
+                                                    <li class="active">1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="socal_media col-lg-1">
+                                            <ul>
+                                                <li class="active" onclick="like()">
+                                                    <div><img src="./img/like.png" alt=""></div>
+                                                    <p>2002.1k</p>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="btn btn-primary btn-lg"
+                                                        data-toggle="modal" data-target="#modelId">
+                                                        <div><img src="./img/chat.png" alt=""></div>
+                                                        <p>2002.1k</p>
+                                                    </button>
+
+                                                </li>
+                                                <li>
+                                                    <a href="https://facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/c-mILo5qZjc"
+                                                        target="blank">
+                                                        <div><img src="./img/share.png" alt=""></div>
+                                                        <p>2002.1k</p>
+                                                    </a>
+                                                </li>
+                                                <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1"
+                                                role="dialog" aria-labelledby="exampleModalCenterTitle"
+                                                aria-hidden="true">
+                                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLongTitle">Modal
+                                                                title</h5>
+                                                            <button type="button" class="close" data-dismiss="modal"
+                                                                aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            ...
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary"
+                                                                data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Save
+                                                                changes</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> -->
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="Tab2" class="tabcontent">
+                                <div class="item_film">
+                                    <div class="top_content_item">
+                                        <div class="item_top avar_film">
+                                            <img src="./img/shang-chi-va-huyen-thoai-thap-nhan-51239-thumbnail.jpg"
+                                                alt="">
+                                        </div>
+                                        <div class="item_top right_top">
+                                            <h1>Ăn Cơm Đã, Yêu Để Sau</h1>
+                                            <a href="">Link Full Film: https://motchill.net/xem-phim/bay-vi...</a>
+                                            <div class="top_star_hash">
+                                                <img src="./img/star_rank.png" alt="">
+                                                <p>#adndnd, #kdjsfj, #kgkdg, ...</p>
+                                                <div class="right_ver">
+                                                    <button>Copy link</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="body_content_item">
+                                        <iframe src="https://www.youtube.com/embed/c-mILo5qZjc"
+                                            title="YouTube video player" frameborder="0"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen></iframe>
+                                        <div class="right_content_item col-lg-1">
+                                            <div class="pratice">
+                                                <h3>Tập</h3>
+                                                <ul class="pratice_item">
+                                                    <li class="active">1</li>
+                                                    <li>2</li>
+                                                    <li>3</li>
+                                                    <li>4</li>
+                                                    <li>5</li>
+                                                    <li>6</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="socal_media col-lg-1">
+                                            <ul>
+                                                <li class="active">
+                                                    <div><img src="./img/like.png" alt=""></div>
+                                                    <p>2002.1k</p>
+                                                </li>
+                                                <li>
+                                                    <div><img src="./img/chat.png" alt=""></div>
+                                                    <p>2002.1k</p>
+                                                </li>
+                                                <li>
+                                                    <div><img src="./img/share.png" alt=""></div>
+                                                    <p>2002.1k</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-1"></div>
+                    </div>
+                </div>
+                <div class="col-lg-2 quang_cao">
+                    <div id="carouselId" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="carousel-item active">
+                                <img src="./img/quangcao.png" alt="">
+                            </div>
+                            <!-- <div class="carousel-item">
+                            <img src="./img/quangcao.png" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/quangcao.png" alt="">
+                        </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <footer>
+            <div class="footer">
+                <div class="container">
+                    <div class="bar">
+                        <div class="bar-wrap">
+                            <div class="links">
+                                <img src="data:image/svg+xml,%3Csvg%20xmlns=&#x27;http://www.w3.org/2000/svg&#x27;%20viewBox=&#x27;0%200%200%200&#x27;%3E%3C/svg%3E"
+                                    alt="Phim Mới"
+                                    data-lazy-src="https://ephimmoi.net/wp-content/uploads/2021/08/logo.png"><noscript><img
+                                        src="img/logo.png" alt="Phim Mới"></noscript>
+                                <br>
+                                <div class="copyright">Copyright 2021 © <a href="https://ephimmoi.net/"
+                                        title="Phim Mới">iPhimmoi.net</a>
+                                    <br>
+                                    <p>Xem phim mới miễn phí nhanh chất lượng cao. Xem Phim online Việt Sub, Thuyết
+                                        minh, lồng tiếng chất
+                                        lượng HD. Xem phim nhanh online chất lượng cao
+                                        <a title="KUBET" href="https://kubet8.com" target="_blank"
+                                            rel="noopener">KUBET</a>
+                                        <a title="VND18" href="https://vnd188.in" target="_blank"
+                                            rel="noopener">VND188</a>
+                                        <a title="KUBET" href="https://kubet9.com" target="_blank"
+                                            rel="noopener">KUBET</a>
+                                    </p><br>
+                                </div>
+                            </div>
+                            <div class="textlink">
+                                <div class="hotlink">
+                                    <h3 class="phimaz-foot">Phim Mới</h3>
+                                    <a href="/dinh-dang/phim-le/" title="Phim Lẻ">Phim lẻ mới</a>
+                                    <a href="/dinh-dang/phim-bo/" title="Phim Bộ">Phim bộ mới</a>
+                                    <a href="/category/chieu-rap/" title="Phim chiếu rạp">Phim chiếu rạp</a>
+                                    <a href="/phim-sap-chieu/" title="Phim sắp chiếu">Phim sắp chiếu</a>
+                                    <a href="/ngon-ngu/thuyet-minh/" title="Phim thuyết minh">Phim thuyết minh</a>
+                                </div>
+                                <div class="hotlink">
+                                    <h3 class="phimaz-foot">Phim Lẻ</h3>
+                                    <a href="/filter-movies/sort/single_movies/status/country/release/1/"
+                                        title="Phim Hành Động">Phim hành
+                                        động</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/single_movies/status/country/release/165//"
+                                        title="Phim kiếm hiệp">Phim kiếm hiệp</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/single_movies/status/country/release/11/"
+                                        title="Phim kinh dị">Phim kinh dị</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/single_movies/status/country/release/3/"
+                                        title="Phim viễn tưởng">Phim viễn tưởng</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/single_movies/status/country/release/6/"
+                                        title="Phim hoạt hình">Phim hoạt hình</a>
+                                </div>
+                                <div class="hotlink">
+                                    <h3 class="phimaz-foot">Phim Bộ</h3>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/tv_series/status/han-quoc/release/category/"
+                                        title="Phim bộ Hàn Quốc">Phim bộ Hàn Quốc</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/tv_series/status/trung-quoc/release/category/"
+                                        title="Phim bộ Trung Quốc">Phim bộ Trung Quốc</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/tv_series/status/my/release/category/"
+                                        title="Phim bộ Mỹ">Phim bộ Mỹ</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/tv_series/status/viet-nam/release/category/"
+                                        title="Phim bộ Việt Nam">Phim bộ Việt Nam</a>
+                                    <a href="https://ephimmoi.net/filter-movies/sort/tv_series/status/hong-kong/release/category/"
+                                        title="Phim bộ Hồng Kông">Phim bộ Hồng Kông</a>
+                                </div>
+                            </div>
+                            <div class="social"><a href="#" class="call"><span data-icon="7" class="icon"></span>
+                                    <span class="info"><span class="follow">Email liên hệ:</span>
+                                        <span class="num"><span class="__cf_email__"
+                                                data-cfemail="acc5dcc4c5c1c1c3c5c8c3d8c2c9d8eccbc1cdc5c082cfc3c1">[email&#160;protected]</span></span></span></a>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="fb-root"></div>
+        </footer>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+        <script>
+            function openTab(evt, cityName) {
+                // Declare all variables
+                var i, tabcontent, tablinks;
+
+                // Get all elements with class="tabcontent" and hide them
+                tabcontent = document.getElementsByClassName("tabcontent");
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                }
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                // Show the current tab, and add an "active" class to the button that opened the tab
+                document.getElementById(cityName).style.display = "block";
+                evt.currentTarget.className += " active";
+            }
+        </script>
+    </body>
+
+</html>
