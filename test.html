@@ -14,6 +14,56 @@
         <link href="css/styles.css" rel="stylesheet">
         <link href="css/phim.css" rel="stylesheet">
         <link rel="stylesheet" href="./css/news.css">
+        <style>
+			#header .site-title {
+				background: url(https://ephimmoi.net/wp-content/uploads/2021/08/logo.png) no-repeat top left;
+				background-size: contain;
+				text-indent: -9999px;
+			}
+
+			.tab {
+				overflow: hidden;
+				text-align: right;
+				margin-top: 10px;
+			}
+
+			/* Style the buttons that are used to open the tab content */
+			.tab button {
+				background-color: #323031;
+				/* float: left; */
+				outline: none;
+				cursor: pointer;
+				transition: 0.3s;
+				width: 124px;
+				height: 34px;
+				justify-content: center;
+				color: white;
+				font-size: 16px;
+				border: 2px solid #323031;
+			}
+
+			/* Change background color of buttons on hover */
+			/* .tab button:hover {
+				background-color: #ddd;
+			} */
+
+			/* Create an active/current tablink class */
+			.tab button.active,
+			.tab button:hover {
+				background-color: #D4C946;
+				border: 2px solid #D4C946;
+				color: black;
+			}
+
+			/* Style the tab content */
+			.tabcontent {
+				display: none;
+			}
+
+			.tabcontent.active {
+				display: block;
+			}
+		</style>
     </head>
 
     <body>
@@ -308,7 +358,11 @@
                                             </div>
                                         </div>
                                     </div>
-
+                                    <button type="button" class="btn btn-primary btn-lg"
+                                    data-toggle="modal" data-target="#modelId">
+                                    <div><img src="./img/chat.png" alt=""></div>
+                                    <p>2002.1k</p>
+                                </button>
                                     <div class="modal fade background_edit" id="modelId" tabindex="-1" role="dialog"
                                         aria-labelledby="modelTitleId" aria-hidden="true">
                                         <div class="modal-dialog" role="document">
@@ -321,7 +375,16 @@
                                                     </button>
                                                 </div>
                                                 <div class="modal-body">
-                                                    Body
+                                                    <div class="form-group">
+                                                      <label for="short_link">Link rút gọn</label>
+                                                      <input type="text"
+                                                        class="form-control" name="short_link" id="short_link" aria-describedby="helpId" placeholder="">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label for="link_film">Link phim</label>
+                                                        <input type="text"
+                                                          class="form-control" name="link_film" id="link_film" aria-describedby="helpId" placeholder="">
+                                                      </div>
                                                 </div>
                                                 <div class="modal-footer">
                                                     <button type="button" class="btn btn-secondary"
@@ -370,31 +433,6 @@
                                                         <p>2002.1k</p>
                                                     </a>
                                                 </li>
-                                                <!-- <div class="modal fade" id="exampleModalCenter" tabindex="-1"
-                                                role="dialog" aria-labelledby="exampleModalCenterTitle"
-                                                aria-hidden="true">
-                                                <div class="modal-dialog modal-dialog-centered" role="document">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <h5 class="modal-title" id="exampleModalLongTitle">Modal
-                                                                title</h5>
-                                                            <button type="button" class="close" data-dismiss="modal"
-                                                                aria-label="Close">
-                                                                <span aria-hidden="true">&times;</span>
-                                                            </button>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            ...
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-secondary"
-                                                                data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Save
-                                                                changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div> -->
                                             </ul>
                                         </div>
                                     </div>
