@@ -1,4 +1,7 @@
-.content_body{font-family: 'Roboto';font-style: normal;}
+body {overflow-x: hidden;}
+.content_body{font-family: 'Roboto';font-style: normal; background-color: #000;width: 100%; box-sizing: border-box;}
+.main_content_body{overflow-y: scroll; height: calc(100vh - 108px); box-sizing: border-box;}
+.main_content_body::-webkit-scrollbar{width: 0; display: none;}
 .item_film{margin-bottom: 50px;}
 .top_content_item {display: inline-block; width: 100%; padding: 0;}
 .tabcontent .top_content_item .item_top {float: left; margin-right: 20px;}
@@ -12,28 +15,33 @@
 .tabcontent .top_content_item .item_top .top_star_hash p{float: left;font-family: 'Roboto'; font-style: normal;font-size: 14px; line-height: 14px; color: #fff; padding-top: 5px;}
 .right_ver {float: right;}
 .right_ver button {width: 137px; height: 39px; border: none; background-color: #D4C946; border-radius: 2px;}
-.body_content_item iframe {width: 100%; height: 400px;}
+.body_content_item iframe {width: 100%; height: 400px; border: 2px solid #fff; box-sizing: border-box;}
 .body_content_item {position: relative;}
-.right_content_item {position: absolute; left: 100%; top: 0; padding: 5px; height: 100%; text-align: center;}
+.right_content_item {position: absolute; left: 100%; top: 0; padding: 5px; height: 100%;}
 .right_content_item h3 {font-size: 16px;line-height: 24px;color: #FFFFFF;margin-bottom: 5px; margin-top: 0;}
-.pratice_item {width: 100%; padding: 0; margin: 0; display: flex; flex-direction: column; list-style: none; height: 90px; overflow-y: scroll}
-.pratice_item::-webkit-scrollbar{width: 1px;}
+.pratice{padding-left: 25px;}
+.pratice_item {width: 100%; padding: 0; margin: 0; display: flex; flex-direction: column; list-style: none; height: 120px; overflow-y: scroll; box-sizing: border-box;}
+.pratice_item::-webkit-scrollbar{width: 0px;}
 .pratice_item li {width: 23px;height: 21px;border: 1px solid #D4C946;box-sizing: border-box; text-align: center; align-items: center; color: #fff; transition: all 0.3s ease-in-out; margin-bottom: 5px;}
 .pratice_item li.active, .pratice_item li:hover {background: #D4C946;}
-.socal_media {position: absolute; left: 100%; bottom: 0;}
+.socal_media {position: absolute; left: calc(100% + 10px); bottom: 0;}
 .socal_media ul{ padding: 0; list-style: none;}
 .socal_media ul li div{width: 49px; height: 40px; border-radius: 100%;background-color: rgba(229, 229, 229, 0.61); text-align: center; justify-content: center; align-items: center;}
 .socal_media ul li div img {line-height: 40px; padding: 10px;}
 .socal_media ul li.active div {background: #1450E7;}
+.socal_media p{color: #fff;}
 
 
 .top_popular h1{font-weight: 500;color: #FFFFFF;font-size: 36px; background-color: #A62125; height: 78px; text-align: center; align-items: center; display: flex; justify-content: center; margin: 0;}
-.popular_film {overflow: scroll; height: 100vh;padding: 5px;background-color: #fff;}
+.popular_film {overflow: scroll; height: calc(100vh - 181px);padding: 5px;background-color: #fff;}
 .popular_film .popular_film_item{position: relative; margin-bottom: 5px;}
 .popular_film .popular_film_item .sub_film{position: absolute;top: 0;left: 0; color:  #FFFFFF;font-size: 18px;line-height: 24px;padding: 0px 5px; background-color: #A62125;height: 25px;}
 .popular_film .popular_film_item .sub_film div{position: relative; z-index: 3;}
 .popular_film .popular_film_item .sub_film div::after{position: absolute; height: 18px; width: 18px; transform: rotate(45deg); content: ''; background-color: #A62125; right: -13px; top: 3px; z-index: -1;}
-.popular_film .popular_film_item img {width: 100%;height: 187px; object-fit: cover; object-position: center;}
+.popular_film .popular_film_item img {width: 100%;height: calc(100vh / 5); object-fit: cover; object-position: center;}
 .popular_film .popular_film_item .content {position: absolute; width: 100%; background-color: rgba(0, 0, 0, 0.68);left: 0;bottom: 0;padding:0px 5px;}
 .popular_film .popular_film_item .content h3 {color: #44E2FF;font-weight: bold;font-size: 18px;line-height: 24px;margin: 0; margin-top: 5px;}
 .popular_film .popular_film_item .content p {color: #FFFFFF;font-size: 14px;line-height: 24px;font-weight: bold;}
+
+.quang_cao .carousel-item{text-align: right;}
+.quang_cao img {height: calc(100vh - 108px); padding-top: 10px;}
