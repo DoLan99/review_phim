@@ -33,7 +33,7 @@ body {overflow-x: hidden;}
 
 
 .top_popular h1{font-weight: 500;color: #FFFFFF;font-size: 36px; background-color: #A62125; height: 78px; text-align: center; align-items: center; display: flex; justify-content: center; margin: 0;}
-.popular_film {overflow: scroll; height: calc(100vh - 181px);padding: 5px;background-color: #fff;}
+.popular_film {overflow: scroll; height: calc(100vh - 181px);padding: 5px;background-color: #fff;overflow-x: hidden;}
 .popular_film .popular_film_item{position: relative; margin-bottom: 5px;}
 .popular_film .popular_film_item .sub_film{position: absolute;top: 0;left: 0; color:  #FFFFFF;font-size: 18px;line-height: 24px;padding: 0px 5px; background-color: #A62125;height: 25px;}
 .popular_film .popular_film_item .sub_film div{position: relative; z-index: 3;}
