@@ -53,7 +53,7 @@ button:focus {border: none; outline: none;}
 .quang_cao img {height: calc(100vh - 108px); padding-top: 10px; width: 100%;}
 
 .socal_media_button_chat{background-color: #483d8b00; border: none; outline: none;}
-.edit_modal .modal-dialog {min-width: 500px; margin-right: 80px;}
+.edit_modal .modal-dialog {min-width: 500px; margin-right: 10px;}
 .edit_modal .modal-dialog .modal-body{height: 70vh; overflow-y: scroll;}
 
 .copy_modal .form-group{position: relative;}
