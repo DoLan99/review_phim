@@ -62,3 +62,14 @@ button:focus {border: none; outline: none;}
 .copy_modal .form-group .copy_button {width: 20%;background-color: #c4c4c400 !important; border: none; height: 61px;}
 .copy_modal .form-group .copy_button img {width: 35px; height: 35px;}
 /* .background_edit{background-color: black;} */
+
+
+.show_list_film{width: 500px; position: absolute; top: 100%; right: 0; background-color: grey;z-index: 1; height: 0px; transition: all 0.3s ease-in-out; overflow: hidden;}
+.show_list_film.active{height: auto; overflow-y: auto; max-height: 300px; overflow-y: scroll;}
+.show_list_film li {display: flex; padding: 5px 10px; text-align: left;justify-content: space-between; border-bottom: 1px dotted #C4C4C4;}
+.show_list_film img{width: 10%; object-fit: cover;object-position: center;}
+.show_list_film .show_list_film_item_content{width: 60%;}
+.show_list_film .show_list_film_item_content h2{font-size: 20px;}
+.show_list_film li.active .show_list_film_item_content h2, .show_list_film li:hover .show_list_film_item_content h2{color: #D4C946;}
+.show_list_film .show_list_film_item_content p{font-size: 15px; margin: 0;}
+.show_list_film .show_list_film_item_sub{width: 20%;}

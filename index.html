@@ -126,9 +126,14 @@
 			}
 
 			.tab {
-				overflow: hidden;
+				/* overflow: hidden; */
 				text-align: right;
 				margin-top: 10px;
+				position: relative;
+			}
+
+			.tab .button_tablink{
+				display: inline;
 			}
 
 			/* Style the buttons that are used to open the tab content */
@@ -493,8 +498,69 @@
 								EPHIMMOI.NET.
 								Xin cám ơn đã ủng hộ.</div>
 							<div class="tab">
-								<button class="tablinks active" onclick="openTab(event, 'Tab1')">Phim đề cử</button>
-								<button class="tablinks" id="tab2_content" onclick="openTab(event, 'Tab2')">Phim mới</button>
+								<div class="button_tablink"><button class="tablinks active" onclick="openTab(event, 'Tab1')">Phim đề
+										cử</button></div>
+								<div class="button_tablink" id="tab2_content"><button class="tablinks" onclick="openTab(event, 'Tab2')">Phim
+										mới</button>
+									<ul class="show_list_film">
+										<li class="active">
+											<img src="./img/pic_film1.png" alt="">
+											<div class="show_list_film_item_content">
+												<h2>Giáng sinh ở Cali</h2>
+												<p>A California Christmas</p>
+											</div>
+											<div class="show_list_film_item_sub">HD Vietsub</div>
+										</li>
+										<li>
+											<img src="./img/pic_film1.png" alt="">
+											<div class="show_list_film_item_content">
+												<h2>Giáng sinh ở Cali</h2>
+												<p>A California Christmas</p>
+											</div>
+											<div class="show_list_film_item_sub">HD Vietsub</div>
+										</li>
+										<li>
+											<img src="./img/pic_film1.png" alt="">
+											<div class="show_list_film_item_content">
+												<h2>Giáng sinh ở Cali</h2>
+												<p>A California Christmas</p>
+											</div>
+											<div class="show_list_film_item_sub">HD Vietsub</div>
+										</li>
+										<li>
+											<img src="./img/pic_film1.png" alt="">
+											<div class="show_list_film_item_content">
+												<h2>Giáng sinh ở Cali</h2>
+												<p>A California Christmas</p>
+											</div>
+											<div class="show_list_film_item_sub">HD Vietsub</div>
+										</li>
+										<li>
+											<img src="./img/pic_film1.png" alt="">
+											<div class="show_list_film_item_content">
+												<h2>Giáng sinh ở Cali</h2>
+												<p>A California Christmas</p>
+											</div>
+											<div class="show_list_film_item_sub">HD Vietsub</div>
+										</li>
+										<li>
+											<img src="./img/pic_film1.png" alt="">
+											<div class="show_list_film_item_content">
+												<h2>Giáng sinh ở Cali</h2>
+												<p>A California Christmas</p>
+											</div>
+											<div class="show_list_film_item_sub">HD Vietsub</div>
+										</li>
+										<li>
+											<img src="./img/pic_film1.png" alt="">
+											<div class="show_list_film_item_content">
+												<h2>Giáng sinh ở Cali</h2>
+												<p>A California Christmas</p>
+											</div>
+											<div class="show_list_film_item_sub">HD Vietsub</div>
+										</li>
+									</ul>
+								</div>
 							</div>
 							<div class="modal fade bd-example-modal-lg edit_modal" id="modelId" tabindex="-1"
 								role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
@@ -821,7 +887,7 @@
 												alt="">
 										</div>
 										<div class="item_top right_top">
-											<h1>Ăn Cơm Đã, Yêu Để Sau</h1>
+											<h1>Ăn Cơm Đã, Yêu Để Sau111</h1>
 											<a href="">Link Full Film: https://motchill.net/xem-phim/bay-vi...</a>
 											<div class="top_star_hash">
 												<img src="./img/star_rank.png" alt="">
@@ -1051,10 +1117,18 @@
 						}
 					}
 				});
+			});
 
-				$(".tablinks").hover(function(){
-					alert('1234'); 
+			$(document).ready(function () {
+				$("#tab2_content").hover(function () {
+					$('.show_list_film').addClass('active');
+				}, function () {
+					$('.show_list_film').removeClass('active');
 				});
+
+				// design pic
+				var cw = $('.show_list_film img').width();
+				$(".show_list_film img").css({'height':cw+'px'});
 			})
 		</script>
 		<script>
