@@ -1,4 +1,5 @@
 body {overflow-x: hidden;}
+button:focus {border: none; outline: none;}
 
 .sign_in_button { float: left; display: block;color: #fff; padding: 5px 10px; margin-top: 3px; text-decoration: none; border: none; background-color: #000; margin-top: 6px; margin-left: 30px; border: 2px solid #D4C946; text-transform: uppercase;}
 
@@ -10,7 +11,7 @@ body {overflow-x: hidden;}
 .item_film{margin-bottom: 50px;}
 .top_content_item {display: inline-block;width: 100%;margin-bottom: 10px;padding: 0;}
 .tabcontent .top_content_item .item_top {float: left; margin-right: 20px;}
-.tabcontent .top_content_item .avar_film img {width: 80px; height: 80px; object-fit: cover; object-position: center; border-radius: 100%;}
+.tabcontent .top_content_item .avar_film img {width: 80px;height: 80px;object-fit: cover;object-position: center;/* border-radius: 100%; */}
 .tabcontent .top_content_item .item_top h1 {font-family: 'Roboto'; font-style: normal;font-size: 24px; line-height: 24px; color: white; margin-top: 0; margin-bottom: 5px;}
 .tabcontent .top_content_item .item_top a {font-family: 'Roboto'; font-style: normal;font-size: 14px; line-height: 14px; color: #fff; text-decoration: none;}
 .tabcontent .top_content_item .item_top.right_top{width: calc(100% - 100px); margin: 0;}
@@ -52,11 +53,12 @@ body {overflow-x: hidden;}
 .quang_cao img {height: calc(100vh - 108px); padding-top: 10px; width: 100%;}
 
 .socal_media_button_chat{background-color: #483d8b00; border: none; outline: none;}
-.edit_modal .modal-dialog {min-width: 700px;}
+.edit_modal .modal-dialog {min-width: 500px; margin-right: 80px;}
 .edit_modal .modal-dialog .modal-body{height: 70vh; overflow-y: scroll;}
 
 .copy_modal .form-group{position: relative;}
-.copy_modal .form-group input {background-color: #C4C4C4 !important; color: #000 !important; padding: 30px; overflow-x: unset;}
-.copy_modal .form-group .copy_button {position: absolute; bottom:12px; right: 30px; height: 35px; width: 35px;background-color: #C4C4C4 !important; border: none;}
-.copy_modal .form-group .copy_button img {width: 100%;}
+.copy_modal .form-group div {background-color: #C4C4C4 !important; border-radius: .25rem; display: flex;}
+.copy_modal .form-group input {background-color: #c4c4c400 !important; color: #000 !important; padding: 30px; overflow-x: unset; width: 100%;border: none !important; border-radius: 0;}
+.copy_modal .form-group .copy_button {width: 20%;background-color: #c4c4c400 !important; border: none; height: 61px;}
+.copy_modal .form-group .copy_button img {width: 35px; height: 35px;}
 /* .background_edit{background-color: black;} */
