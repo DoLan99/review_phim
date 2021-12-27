@@ -617,20 +617,19 @@
 								aria-labelledby="modelTitleId" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title">Khu vực phát video</h5>
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
 										<div class="modal-body">
 											<div class="container-fluid">
 												<div class="row">
-													<div class="col-md-8">
-														<iframe src="https://www.youtube.com/embed/Rh85Vqummy8"
-															title="YouTube video player" frameborder="0"
-															allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-															allowfullscreen></iframe>
+													<div class="col-md-8 left_content">
+														<button class="button_close_content" type="button" class="close"
+															data-dismiss="modal" aria-label="Close">
+															<span aria-hidden="true">&times;</span>
+														</button>
+														<video id="video_area" width="320" height="240" controls>
+															<source id="source_area"
+																src="./film_test/_Bộ Tứ Siêu Đẳng đại chiến Người Bạc _ http___bblink.com_Jeljfe5.mp4"
+																type="video/ogg">
+														</video>
 													</div>
 													<div class="col-md-4">
 														<div class="show_content_film_top_title">
@@ -704,9 +703,23 @@
 																					alt=""></button>
 																		</div>
 																	</div>
+																	<div class="form-group">
+																		<label for="short_link">Link rút gọn</label>
+																		<div class="link_and_btn">
+																			<input type="text" class="form-control"
+																				name="short_link" id="he_link_detail"
+																				aria-describedby="helpId" placeholder=""
+																				value="https://motchill.net/xem-phim-hd/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
+																				disabled>
+																			<button class="copy_button"
+																				onclick="copy_hd_link_detail()"><img
+																					src="./img/copy_icon.png"
+																					alt=""></button>
+																		</div>
+																	</div>
 																</div>
 															</div>
-															<div class="copy_full_hd">
+															<!-- <div class="copy_full_hd">
 																<input type="text" class="form-control"
 																	name="short_link" id="he_link_detail"
 																	aria-describedby="helpId" placeholder=""
@@ -715,7 +728,7 @@
 																<button class="copy_button"
 																	onclick="copy_hd_link_detail()"><img
 																		src="./img/copy_icon.png" alt=""></button>
-															</div>
+															</div> -->
 														</div>
 														<div class="form_comment_area">
 															<div>
@@ -728,10 +741,6 @@
 													</div>
 												</div>
 											</div>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-secondary"
-												data-dismiss="modal">Close</button>
 										</div>
 									</div>
 								</div>
@@ -1258,20 +1267,37 @@
 				});
 			});
 
+			let lastScrollTop = 0;
+
 			$(document).ready(function () {
 				$("#tab2_content").hover(function () {
 					$('.show_list_film').addClass('active');
+					lastScrollTop = 0;
 				}, function () {
 					$('.show_list_film').removeClass('active');
 				});
 
 				$('.top').click(function () {
 					$('.show_list_cop').toggleClass('active');
-				})
+				});
+
+				$('.left_content').scroll(function () {
+					console.log($("#source_area").attr('src'));
+					let st = $(this).scrollTop();
+					if (st > lastScrollTop) {
+						$("#source_area").attr('src', './film_test/_phim công viên kỷ jura 2 _ http___bblink.com_6FZyOr.mp4');
+					} else {
+						$("#source_area").attr('src', './film_test/_Bộ Tứ Siêu Đẳng đại chiến Người Bạc _ http___bblink.com_Jeljfe5.mp4');
+					};
+					$("#video_area")[0].load();
+					lastScrollTop = st;
+				});
 
 				// design pic
 				var cw = $('.show_list_film img').width();
 				$(".show_list_film img").css({ 'height': cw + 'px' });
+
+
 			})
 		</script>
 		<script>
