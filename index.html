@@ -201,8 +201,9 @@
 	</head>
 
 	<body>
+		<!-- desktop -->
 		<div class="top-message"></div>
-		<header>
+		<header class="d-none d-md-block">
 			<div class="header row">
 				<div class="col-lg-3"></div>
 				<div class="col-lg-6">
@@ -230,7 +231,7 @@
 		<head>
 			<meta name="theme-color" content="#f6a047">
 		</head>
-		<nav>
+		<nav class="d-none d-sm-block">
 			<div class="clear"></div>
 			<div class="row">
 				<div class="col-lg-3"></div>
@@ -402,6 +403,10 @@
 				<div class="col-lg-2"></div>
 			</div>
 		</nav>
+
+
+
+
 		<script>
 			$(document).ready(function () {
 				$('.sign_in_button').click(function () {
@@ -409,9 +414,9 @@
 				})
 			})
 		</script>
-		<div class="content_body">
+		<div class="content_body ">
 			<div class="row">
-				<div class="col-lg-3">
+				<div class="col-lg-3 d-none d-md-block">
 					<div class="top_popular">
 						<h1>TOP THỊNH HÀNH</h1>
 					</div>
@@ -468,7 +473,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-7 main_content_body">
+				<div class="col-lg-7 col-md-12 main_content_body">
 					<div class="row">
 						<div class="col-lg-11">
 							<div class="block-wrapper page-single block-note">Hãy truy cập PHIMMOI bằng tên miền mới của
@@ -1090,7 +1095,7 @@
 						<div class="col-lg-1"></div>
 					</div>
 				</div>
-				<div class="col-lg-2 quang_cao">
+				<div class="col-lg-2 d-none d-md-block quang_cao">
 					<div id="carouselId" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner" role="listbox">
 							<div class="carousel-item active">
@@ -1106,6 +1111,12 @@
 					</div>
 				</div>
 			</div>
+		</div>
+
+		
+		<!-- mobile  -->
+		<div class="content_mobile_menu">
+
 		</div>
 		<div class="clearfix"></div>
 		<footer>
