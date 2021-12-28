@@ -414,7 +414,207 @@
 				})
 			})
 		</script>
-		<div class="content_body ">
+
+		<div class="modal fade bd-example-modal-lg edit_modal" id="modelId" tabindex="-1" role="dialog"
+			aria-labelledby="modelTitleId" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Comment</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="fb-root"></div>
+						<script async defer crossorigin="anonymous"
+							src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0"
+							nonce="XCnqVWWw"></script>
+						<div class="fb-comments"
+							data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
+							data-width="450" data-numposts="5"></div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Button trigger modal -->
+		<!-- Modal show copy-->
+		<div class="modal fade copy_modal" id="modelCopy" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+			aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Copy</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-group">
+							<label for="short_link">Link rút gọn</label>
+							<div>
+								<input type="text" class="form-control" name="short_link" id="short_link"
+									aria-describedby="helpId" placeholder=""
+									value="https://motchill.net/xem-phim/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
+									disabled>
+								<button class="copy_button" onclick="copy_short_link()"><img src="./img/copy_icon.png"
+										alt=""></button>
+							</div>
+						</div>
+						<div class="form-group">
+							<label for="link_film">Link film</label>
+							<div>
+								<input type="text" class="form-control" name="link_film" id="link_film"
+									aria-describedby="helpId" placeholder="" value="https://motchill.net/xem-phim.html"
+									disabled>
+								<button class="copy_button" onclick="copy_link()"><img src="./img/copy_icon.png"
+										alt=""></button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal show content_film-->
+		<div class="modal fade show_content_film" id="modelId3" tabindex="-1" role="dialog"
+			aria-labelledby="modelTitleId" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="container-fluid">
+							<div class="row">
+								<button class="button_close_content" type="button" class="close" data-dismiss="modal"
+									aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+								<div class="col-md-8 left_content">
+									<video id="video_area" width="320" height="240" controls>
+										<source id="source_area"
+											src="./film_test/_Bộ Tứ Siêu Đẳng đại chiến Người Bạc _ http___bblink.com_Jeljfe5.mp4"
+											type="video/ogg">
+									</video>
+								</div>
+								<div class="col-md-4">
+									<div class="show_content_film_top_title">
+										<img src="./img/pic_film1.png" alt="">
+										<div class="title_and_dess">
+											<h3>Tên film</h3>
+											<p>Chú thích của film</p>
+										</div>
+										<div class="follow_button">
+											<button>Like</button>
+										</div>
+									</div>
+									<div class="show_content_film_desciption">
+										Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+										Consectetur, veritatis modi deleniti consequuntur eveniet
+										fuga neque placeat beatae reiciendis molestiae illo voluptas
+										quis vel ut. Impedit distinctio repellendus aliquid quam!
+									</div>
+									<div class="show_practice">
+										<div class="abcd">
+											<a href="#">1</a>
+											<a href="#">2</a>
+											<a href="#">3</a>
+											<a href="#">4</a>
+											<a href="#">5</a>
+											<a href="#">6</a>
+											<a href="#">7</a>
+											<a href="#">8</a>
+											<a href="#">9</a>
+											<a href="#">10</a>
+											<a href="#">11</a>
+											<a href="#">12</a>
+											<a href="#">13</a>
+											<a href="#">14</a>
+											<a href="#">15</a>
+											<a href="#">16</a>
+											<a href="#">17</a>
+											<a href="#">18</a>
+											<a href="#">19</a>
+											<a href="#">20</a>
+											<a href="#">21</a>
+											<a href="#">22</a>
+											<a href="#">23</a>
+											<a href="#">24</a>
+											<a href="#">25</a>
+										</div>
+									</div>
+									<div class="copy_button_area">
+										<div class="button_top">
+											<div class="top">Sao chép liên kết</div>
+											<div class="show_list_cop">
+												<div class="form-group">
+													<label for="short_link">Link rút gọn</label>
+													<div class="link_and_btn">
+														<input type="text" class="form-control" name="short_link"
+															id="short_link_detail" aria-describedby="helpId"
+															placeholder=""
+															value="https://motchill.net/xem-phim/bay-vien-ngoc-rong"
+															disabled>
+														<button class="copy_button"
+															onclick="copy_short_link_detail()"><img
+																src="./img/copy_icon.png" alt=""></button>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="short_link">Link rút gọn</label>
+													<div class="link_and_btn">
+														<input type="text" class="form-control" name="short_link"
+															id="link_detail" aria-describedby="helpId" placeholder=""
+															value="https://motchill.net/xem-phim/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
+															disabled>
+														<button class="copy_button" onclick="copy_link_detail()"><img
+																src="./img/copy_icon.png" alt=""></button>
+													</div>
+												</div>
+												<div class="form-group">
+													<label for="short_link">Link rút gọn</label>
+													<div class="link_and_btn">
+														<input type="text" class="form-control" name="short_link"
+															id="he_link_detail" aria-describedby="helpId" placeholder=""
+															value="https://motchill.net/xem-phim-hd/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
+															disabled>
+														<button class="copy_button" onclick="copy_hd_link_detail()"><img
+																src="./img/copy_icon.png" alt=""></button>
+													</div>
+												</div>
+											</div>
+										</div>
+										<!-- <div class="copy_full_hd">
+										<input type="text" class="form-control"
+											name="short_link" id="he_link_detail"
+											aria-describedby="helpId" placeholder=""
+											value="https://motchill.net/xem-phim-hd/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
+											disabled>
+										<button class="copy_button"
+											onclick="copy_hd_link_detail()"><img
+												src="./img/copy_icon.png" alt=""></button>
+									</div> -->
+									</div>
+									<div class="form_comment_area">
+										<div>
+											<h3>Đăng nhập để xem bình luận</h3>
+											<p>Đăng nhập để xem bình luận và thích video</p>
+											<button>Đăng nhập</button>
+											<p>Bạn không có tài khoản? <a href="#">Đăng kí</a></p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="content_body d-none d-md-block">
 			<div class="row">
 				<div class="col-lg-3 d-none d-md-block">
 					<div class="top_popular">
@@ -548,214 +748,6 @@
 									</ul>
 								</div>
 							</div>
-							<div class="modal fade bd-example-modal-lg edit_modal" id="modelId" tabindex="-1"
-								role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title">Comment</h5>
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body">
-											<div id="fb-root"></div>
-											<script async defer crossorigin="anonymous"
-												src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v12.0"
-												nonce="XCnqVWWw"></script>
-											<div class="fb-comments"
-												data-href="https://developers.facebook.com/docs/plugins/comments#configurator"
-												data-width="450" data-numposts="5"></div>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-secondary"
-												data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- Button trigger modal -->
-							<!-- Modal show copy-->
-							<div class="modal fade copy_modal" id="modelCopy" tabindex="-1" role="dialog"
-								aria-labelledby="modelTitleId" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-header">
-											<h5 class="modal-title">Copy</h5>
-											<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-												<span aria-hidden="true">&times;</span>
-											</button>
-										</div>
-										<div class="modal-body">
-											<div class="form-group">
-												<label for="short_link">Link rút gọn</label>
-												<div>
-													<input type="text" class="form-control" name="short_link"
-														id="short_link" aria-describedby="helpId" placeholder=""
-														value="https://motchill.net/xem-phim/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
-														disabled>
-													<button class="copy_button" onclick="copy_short_link()"><img
-															src="./img/copy_icon.png" alt=""></button>
-												</div>
-											</div>
-											<div class="form-group">
-												<label for="link_film">Link film</label>
-												<div>
-													<input type="text" class="form-control" name="link_film"
-														id="link_film" aria-describedby="helpId" placeholder=""
-														value="https://motchill.net/xem-phim.html" disabled>
-													<button class="copy_button" onclick="copy_link()"><img
-															src="./img/copy_icon.png" alt=""></button>
-												</div>
-											</div>
-										</div>
-										<div class="modal-footer">
-											<button type="button" class="btn btn-secondary"
-												data-dismiss="modal">Close</button>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Modal show content_film-->
-							<div class="modal fade show_content_film" id="modelId3" tabindex="-1" role="dialog"
-								aria-labelledby="modelTitleId" aria-hidden="true">
-								<div class="modal-dialog" role="document">
-									<div class="modal-content">
-										<div class="modal-body">
-											<div class="container-fluid">
-												<div class="row">
-													<button class="button_close_content" type="button" class="close"
-														data-dismiss="modal" aria-label="Close">
-														<span aria-hidden="true">&times;</span>
-													</button>
-													<div class="col-md-8 left_content">
-														<video id="video_area" width="320" height="240" controls>
-															<source id="source_area"
-																src="./film_test/_Bộ Tứ Siêu Đẳng đại chiến Người Bạc _ http___bblink.com_Jeljfe5.mp4"
-																type="video/ogg">
-														</video>
-													</div>
-													<div class="col-md-4">
-														<div class="show_content_film_top_title">
-															<img src="./img/pic_film1.png" alt="">
-															<div class="title_and_dess">
-																<h3>Tên film</h3>
-																<p>Chú thích của film</p>
-															</div>
-															<div class="follow_button">
-																<button>Like</button>
-															</div>
-														</div>
-														<div class="show_content_film_desciption">
-															Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-															Consectetur, veritatis modi deleniti consequuntur eveniet
-															fuga neque placeat beatae reiciendis molestiae illo voluptas
-															quis vel ut. Impedit distinctio repellendus aliquid quam!
-														</div>
-														<div class="show_practice">
-															<div class="abcd">
-																<a href="#">1</a>
-																<a href="#">2</a>
-																<a href="#">3</a>
-																<a href="#">4</a>
-																<a href="#">5</a>
-																<a href="#">6</a>
-																<a href="#">7</a>
-																<a href="#">8</a>
-																<a href="#">9</a>
-																<a href="#">10</a>
-																<a href="#">11</a>
-																<a href="#">12</a>
-																<a href="#">13</a>
-																<a href="#">14</a>
-																<a href="#">15</a>
-																<a href="#">16</a>
-																<a href="#">17</a>
-																<a href="#">18</a>
-																<a href="#">19</a>
-																<a href="#">20</a>
-																<a href="#">21</a>
-																<a href="#">22</a>
-																<a href="#">23</a>
-																<a href="#">24</a>
-																<a href="#">25</a>
-															</div>
-														</div>
-														<div class="copy_button_area">
-															<div class="button_top">
-																<div class="top">Sao chép liên kết</div>
-																<div class="show_list_cop">
-																	<div class="form-group">
-																		<label for="short_link">Link rút gọn</label>
-																		<div class="link_and_btn">
-																			<input type="text" class="form-control"
-																				name="short_link" id="short_link_detail"
-																				aria-describedby="helpId" placeholder=""
-																				value="https://motchill.net/xem-phim/bay-vien-ngoc-rong"
-																				disabled>
-																			<button class="copy_button"
-																				onclick="copy_short_link_detail()"><img
-																					src="./img/copy_icon.png"
-																					alt=""></button>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label for="short_link">Link rút gọn</label>
-																		<div class="link_and_btn">
-																			<input type="text" class="form-control"
-																				name="short_link" id="link_detail"
-																				aria-describedby="helpId" placeholder=""
-																				value="https://motchill.net/xem-phim/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
-																				disabled>
-																			<button class="copy_button"
-																				onclick="copy_link_detail()"><img
-																					src="./img/copy_icon.png"
-																					alt=""></button>
-																		</div>
-																	</div>
-																	<div class="form-group">
-																		<label for="short_link">Link rút gọn</label>
-																		<div class="link_and_btn">
-																			<input type="text" class="form-control"
-																				name="short_link" id="he_link_detail"
-																				aria-describedby="helpId" placeholder=""
-																				value="https://motchill.net/xem-phim-hd/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
-																				disabled>
-																			<button class="copy_button"
-																				onclick="copy_hd_link_detail()"><img
-																					src="./img/copy_icon.png"
-																					alt=""></button>
-																		</div>
-																	</div>
-																</div>
-															</div>
-															<!-- <div class="copy_full_hd">
-																<input type="text" class="form-control"
-																	name="short_link" id="he_link_detail"
-																	aria-describedby="helpId" placeholder=""
-																	value="https://motchill.net/xem-phim-hd/bay-vien-ngoc-rong-tap-279-qaf8-1254_88138.html"
-																	disabled>
-																<button class="copy_button"
-																	onclick="copy_hd_link_detail()"><img
-																		src="./img/copy_icon.png" alt=""></button>
-															</div> -->
-														</div>
-														<div class="form_comment_area">
-															<div>
-																<h3>Đăng nhập để xem bình luận</h3>
-																<p>Đăng nhập để xem bình luận và thích video</p>
-																<button>Đăng nhập</button>
-																<p>Bạn không có tài khoản? <a href="#">Đăng kí</a></p>
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
 							<script>
 								function copy_short_link() {
 									/* Get the text field */
@@ -884,11 +876,10 @@
 													<p>2002.1k</p>
 												</li>
 												<li>
-													<button type="button" class="socal_media_button_chat"
-														data-toggle="modal" data-target="#modelId">
+													<buttonccc>
 														<div><img src="./img/chat.png" alt=""></div>
 														<p>2002.1k</p>
-													</button>
+														</button>
 												</li>
 												<li>
 													<a href="https://facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/c-mILo5qZjc"
@@ -1113,13 +1104,68 @@
 			</div>
 		</div>
 
-		
-		<!-- mobile  -->
-		<div class="content_mobile_menu">
 
+		<!-- mobile  -->
+		<div class="content_mobile">
+			<div class="content_top_mobile">
+				<video id="video_area_mibile" width="320" height="240" controls>
+					<source id="source_area_mobile"
+						src="./film_test/_Bộ Tứ Siêu Đẳng đại chiến Người Bạc _ http___bblink.com_Jeljfe5.mp4"
+						type="video/ogg">
+				</video>
+				<div class="right_content_mobile">
+					<div class="content_mobile_practice">
+						<h4>Tập</h4>
+						<ul>
+							<li>1</li>
+							<li>1</li>
+							<li>1</li>
+							<li>1</li>
+							<li>1</li>
+						</ul>
+					</div>
+					<div class="content_mobile_logo_film">
+						<img src="./img/pic_film1.png" alt="">
+					</div>
+					<div class="content_mobile_logo_socal_media">
+						<button>
+							<img src="./img/love_mobile.png" alt="">
+							<p>17.1k</p>
+						</button>
+						<button type="button" class="socal_media_button_chat" data-toggle="modal"
+							data-target="#modelId">
+							<img src="./img/comment_mobile.png" alt="">
+							<p>17.1k</p>
+						</button>
+						<button>
+							<a href="https://facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/c-mILo5qZjc" target="blank">
+								<img src="./img/share_mobile.png" alt="">
+								<p>17.1k</p>
+							</a>
+						</button>
+					</div>
+					<div class="content_mobile_copy_link">
+						<button type="button" class="socal_media_button_chat" data-toggle="modal"
+							data-target="#modelCopy">Copy_link</button>
+					</div>
+				</div>
+				<div class="content_content_name_des">
+					<h3>@Hiệp đạo chi mai</h3>
+					<p class="link_full">Link Full Film: http://jsdjsfdhfd</p>
+					<div class="tag_film">
+						#hdjfdffj #jsfnsdjfndj #mfgdjg #hdff #jdhfdf #jfdhf #hdfbf #jsdjsd
+					</div>
+				</div>
+			</div>
+			<div class="content_bottom_mobile">
+				<button>Home</button>
+				<button>Home</button>
+				<button>Home</button>
+				<button>Home</button>
+			</div>
 		</div>
 		<div class="clearfix"></div>
-		<footer>
+		<footer class="d-none d-md-block">
 			<div class="footer">
 				<div class="container">
 					<div class="bar">
@@ -1313,7 +1359,8 @@
 				var cw = $('.show_list_film img').width();
 				$(".show_list_film img").css({ 'height': cw + 'px' });
 
-
+				var logo_film_mobile = $('.content_mobile_logo_film img').width();
+				$(".content_mobile_logo_film img").css({ 'height': logo_film_mobile + 'px' });
 			})
 		</script>
 		<script>
