@@ -85,6 +85,7 @@ button:focus {border: none; outline: none;}
 .show_content_film .show_content_film_top_title .follow_button{width: 30%;}
 .show_content_film .show_content_film_top_title .follow_button button {padding: 15px 35px; background-color: #fff; border: 1px solid#fe2c55; color: #fe2c55; border-radius: .25rem; transition: all 0.3s ease-in-out;}
 .show_content_film .show_content_film_top_title .follow_button button:hover{color: #fff; background-color: #fe2c55;}
+.show_content_film_desciption {margin-bottom: 10px;}
 
 .show_practice {display: flex; width: 100%; overflow-x: scroll; padding-bottom: 5px;}
 .show_practice::-webkit-scrollbar{height: 5px;}
@@ -92,7 +93,7 @@ button:focus {border: none; outline: none;}
 .show_practice a{width: 30px; height: 30px; text-decoration: none; border: 1px solid #fe2c55;display: flex; justify-content: center; align-items: center; margin-right: 10px; color: #fe2c55; transition: all 0.3s ease-in-out;}
 .show_practice a:hover, .show_practice a.active{background-color: #fe2c55; color: #fff;}
 
-.copy_button_area{margin-top: 20px;}
+.copy_button_area{margin-top: 20px;display: inline-block;width: 100%;}
 .copy_button_area .button_top {width: 30%; float: right; position: relative;}
 .top {border: 1px solid #fe2c55; justify-content: center; align-items: center; height: 50px; background-color: #fff; width: 100%;display: flex; transition: all 0.3s ease-in-out;}
 .top:hover {background-color: #fe2c55; color: #fff;}
@@ -104,7 +105,7 @@ button:focus {border: none; outline: none;}
 .show_list_cop button img, .copy_full_hd button img {width: 29px; height: 29px;}
 .copy_full_hd {float: left; width: calc(70% - 15px); margin-left: 15px; float: left; display: flex;}
  
-.form_comment_area{display: flex; justify-content: center; text-align: center; align-items: center; width: 100%; height: calc(100vh - 400px);}
+.form_comment_area{display: flex; justify-content: center; text-align: center; align-items: center; width: 100%; height: calc(100vh - 400px); border-top: 1px solid #fe2c55; margin-top: 15px; padding-top: 15px;}
 
 .left_content{overflow-y: scroll; min-height: 100%;}
 .left_content::-webkit-scrollbar{width: 0px; height: 0px;}
