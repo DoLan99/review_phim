@@ -93,10 +93,10 @@ button:focus {border: none; outline: none;}
 .show_practice a:hover, .show_practice a.active{background-color: #fe2c55; color: #fff;}
 
 .copy_button_area{margin-top: 20px;}
-.copy_button_area .button_top {width: 30%; float: left; position: relative;}
+.copy_button_area .button_top {width: 30%; float: right; position: relative;}
 .top {border: 1px solid #fe2c55; justify-content: center; align-items: center; height: 50px; background-color: #fff; width: 100%;display: flex; transition: all 0.3s ease-in-out;}
 .top:hover {background-color: #fe2c55; color: #fff;}
-.show_list_cop{width: 333%; position: absolute; top: calc(100% + 10px); left: 0; background-color: #fe2c55;height: 0;transition: all 0.3s ease-in-out; overflow: hidden;} 
+.show_list_cop{width: 333%; position: absolute; top: calc(100% + 10px); right: 0; background-color: #fe2c55;height: 0;transition: all 0.3s ease-in-out; overflow: hidden;} 
 .show_list_cop.active {height: auto; padding: 10px;}
 .show_list_cop div.link_and_btn, .copy_full_hd div {position: relative; width: 100%; display: flex;}
 .show_list_cop input, .copy_full_hd input { background-color: #fff !important; color: #000 !important; padding: 24px; overflow-x: unset; width: 100%;border: 1px solid #fe2c55 !important; border-radius: 0;}
@@ -105,3 +105,8 @@ button:focus {border: none; outline: none;}
 .copy_full_hd {float: left; width: calc(70% - 15px); margin-left: 15px; float: left; display: flex;}
  
 .form_comment_area{display: flex; justify-content: center; text-align: center; align-items: center; width: 100%; height: calc(100vh - 400px);}
+
+.left_content{overflow-y: scroll; min-height: 100%;}
+.left_content::-webkit-scrollbar{width: 0px; height: 0px;}
+.button_close_content{position: absolute; top: 25px; left: 40px; width: 50px; height: 50px; color: #fff; background-color: #000; border-radius: 100%; z-index: 3; border: 1px solid #000;}
+.left_content video{width: 100%; min-height: 100%; height: calc(100vh - 50px);}

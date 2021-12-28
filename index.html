@@ -620,11 +620,11 @@
 										<div class="modal-body">
 											<div class="container-fluid">
 												<div class="row">
+													<button class="button_close_content" type="button" class="close"
+														data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+													</button>
 													<div class="col-md-8 left_content">
-														<button class="button_close_content" type="button" class="close"
-															data-dismiss="modal" aria-label="Close">
-															<span aria-hidden="true">&times;</span>
-														</button>
 														<video id="video_area" width="320" height="240" controls>
 															<source id="source_area"
 																src="./film_test/_Bộ Tứ Siêu Đẳng đại chiến Người Bạc _ http___bblink.com_Jeljfe5.mp4"
@@ -1280,9 +1280,8 @@
 				$('.top').click(function () {
 					$('.show_list_cop').toggleClass('active');
 				});
-
+				
 				$('.left_content').scroll(function () {
-					console.log($("#source_area").attr('src'));
 					let st = $(this).scrollTop();
 					if (st > lastScrollTop) {
 						$("#source_area").attr('src', './film_test/_phim công viên kỷ jura 2 _ http___bblink.com_6FZyOr.mp4');
