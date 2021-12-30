@@ -115,17 +115,25 @@ button:focus {border: none; outline: none;}
 
 /* mobile */
 .content_mobile {display: flex; height: 100vh; flex-direction: column;}
+<<<<<<< HEAD
 .content_mobile .content_bottom_mobile{height: 70px;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;border-top: 1px solid #D4C946;}
 .content_mobile .content_bottom_mobile button {width: 25%; border: none; background-color: #000; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;}
 .content_mobile .content_bottom_mobile button img {width: 15px;}
 .content_mobile .content_bottom_mobile button p {color: #fff;margin: 0;}
 .content_top_mobile {position: relative; height: calc(100vh - 50px); overflow-y: scroll;}
 .content_top_mobile video {height: 101%; width: 100%; background-color: #000;}
+=======
+.content_mobile .content_bottom_mobile{height: 50px; display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-around;}
+.content_mobile .content_bottom_mobile button {width: 25%; border: none; background-color: #fff;}
+.content_top_mobile {position: relative; height: calc(100vh - 50px); overflow-y: scroll;}
+.content_top_mobile video {height: 101%; width: 100%;}
+>>>>>>> c036776445e89ec762617b2806e24c514f8e6f51
 .right_content_mobile {position: absolute;right: 10px; top: 0; text-align: center; width: 10vw; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; padding-bottom: 50px;}
 /* .content_mobile_practice {} */
 .content_mobile_practice h4 {color: #fff; font-size: 14px;}
 .content_mobile_practice ul {list-style-type: none; height: 20vh; overflow-y: scroll; width: 100%; text-align: center;}
 .content_mobile_practice ul::-webkit-scrollbar{width: 0;}
+<<<<<<< HEAD
 .content_mobile_practice li { width: 30px; height: 30px; background-color: #D4C946;margin: auto; margin-bottom: 10px; justify-content: center; align-items: center; padding: 0;}
 .content_mobile_logo_film {margin-top: 15px; width: 100%;}
 .content_mobile_logo_film img{max-width: 146%;height: auto;border-radius: 100%;/* overflow: hidden; */object-fit: cover;object-position: center;float: right;}
@@ -150,6 +158,21 @@ button:focus {border: none; outline: none;}
 .content_mobile .nofication_content_mobile {border: 1px solid #b8b612;background: #000; width: 80%; color: #fff; font-size: 10px; -webkit-line-clamp: 1; white-space: nowrap; overflow: hidden; padding: 5px 10px; box-sizing: border-box;}
 .content_mobile .search_icon {width: 10%; display: flex; justify-content: center; align-items: center;}
 .content_mobile .search_icon img {width: 20px; float: right; object-fit: cover; object-position: center;}
+=======
+.content_mobile_practice li { width: 30px; height: 30px; background-color: #fe2c55;margin: auto; margin-bottom: 10px; justify-content: center; align-items: center; padding: 0;}
+.content_mobile_logo_film {margin-top: 15px; width: 100%;}
+.content_mobile_logo_film img{width: 100%; height: auto; border-radius: 100%; overflow: hidden; object-fit: cover; object-position: center;}
+.content_mobile_logo_socal_media {margin-top: 10px;}
+.content_mobile_logo_socal_media button {background-color: #ff000000;border: none; margin-top: 10px;}
+.content_mobile_logo_socal_media button img {width: 50px; }
+.content_mobile_logo_socal_media button p {color: #fff; text-align: center;}
+.content_content_name_des {position: absolute; left: 15px; bottom: 50px; width: 70vw;}
+.content_content_name_des h3 {color: #fff;}
+.content_mobile_copy_link button {float: right; padding: 5px 10px; border: 1px solid #000; background-color: #fe2c55; color: #fff;}
+.link_full { color: red;}
+.tag_film {color: #fff; font-weight: bold;}
+
+>>>>>>> c036776445e89ec762617b2806e24c514f8e6f51
 @media only screen and (max-width: 425px) {
     .edit_modal .modal-dialog{
         min-width: 70%;
