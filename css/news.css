@@ -116,10 +116,11 @@ button:focus {border: none; outline: none;}
 /* mobile */
 .content_mobile {display: flex; height: 100vh; flex-direction: column;}
 .content_mobile .content_bottom_mobile{height: 70px;display: flex;flex-direction: row;flex-wrap: wrap;justify-content: space-around;border-top: 1px solid #D4C946;}
-.content_mobile .content_bottom_mobile button {width: 25%; border: none; background-color: #000; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column;}
+.content_mobile .content_bottom_mobile button {width: 25%; border: none; background-color: #000; text-align: center; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: all 0.3s ease-in-out;}
+.content_mobile .content_bottom_mobile button.active{background-color: #D4C946;}
 .content_mobile .content_bottom_mobile button img {width: 15px;}
 .content_mobile .content_bottom_mobile button p {color: #fff;margin: 0;}
-.content_top_mobile {position: relative; height: calc(100vh - 50px); overflow-y: scroll;}
+.content_top_mobile {position: relative;height: calc(100vh - 80px);overflow-y: scroll;}
 .content_top_mobile video {height: 101%; width: 100%; background-color: #000;}
 .right_content_mobile {position: absolute;right: 10px; top: 0; text-align: center; width: 10vw; display: flex; flex-direction: column; justify-content: flex-end; height: 100%; padding-bottom: 50px;}
 /* .content_mobile_practice {} */
@@ -132,7 +133,7 @@ button:focus {border: none; outline: none;}
 .content_mobile_logo_socal_media {margin-top: 10px;}
 .content_mobile_logo_socal_media button {background-color: #ff000000;border: none; margin-top: 10px;}
 .content_mobile_logo_socal_media button img {width: 25px;}
-.content_mobile_logo_socal_media button p {color: #fff; text-align: center;}
+.content_mobile_logo_socal_media button p {color: #fff;text-align: center;font-size: 12px;}
 .content_content_name_des {position: absolute; left: 15px; bottom: 50px; width: 70vw;}
 .content_content_name_des h3 {color: #fff;}
 .content_mobile_copy_link button {float: right; padding: 5px 10px; border: 1px solid #000; background-color: #D4C946; color: #fff; border-radius: 0.25rem; }
@@ -146,10 +147,12 @@ button:focus {border: none; outline: none;}
 .content_mobile .show_button_play {opacity: 1; z-index: 1;}
 .content_mobile .hide_button_play {opacity: 0; transition: all 2s ease-in-out; z-index: -1;}
 
-.content_mobile .search_form {position: absolute; top: 15px; left: 15px; width: calc(100% - 30px); display: flex; justify-content: space-between;}
+.content_mobile .search_form {position: absolute;top: 15px;left: 15px;width: calc(100% - 30px);display: flex;justify-content: space-between;z-index: 3;}
 .content_mobile .nofication_content_mobile {border: 1px solid #b8b612;background: #000; width: 80%; color: #fff; font-size: 10px; -webkit-line-clamp: 1; white-space: nowrap; overflow: hidden; padding: 5px 10px; box-sizing: border-box;}
-.content_mobile .search_icon {width: 10%; display: flex; justify-content: center; align-items: center;}
+.content_mobile .search_icon {width: 10%; display: flex; justify-content: center; align-items: center; position: relative;}
 .content_mobile .search_icon img {width: 20px; float: right; object-fit: cover; object-position: center;}
+.content_mobile .search_icon form input {position: absolute; right: 100%; top: 0; width: 900%; opacity: 0; z-index: -1; transition: all 0.3s ease-in-out;}
+.content_mobile .search_icon form input.active {opacity: 1; z-index: 1;}
 @media only screen and (max-width: 425px) {
     .edit_modal .modal-dialog{
         min-width: 70%;

@@ -474,6 +474,16 @@
 										alt=""></button>
 							</div>
 						</div>
+						<div class="form-group d-block d-sm-none">
+							<label for="copy_link_mobile">Link</label>
+							<div>
+								<input type="text" class="form-control" name="copy_link_mobile" id="copy_link_mobile"
+									aria-describedby="helpId" placeholder="" value="https://motchill.net/xem-phim.html"
+									disabled>
+								<button class="copy_button" onclick="copy_link_mobile()"><img src="./img/copy_icon.png"
+										alt=""></button>
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -766,6 +776,21 @@
 								function copy_link() {
 									/* Get the text field */
 									var copyText = document.getElementById("link_film");
+
+									/* Select the text field */
+									copyText.select();
+									copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+									/* Copy the text inside the text field */
+									navigator.clipboard.writeText(copyText.value);
+
+									/* Alert the copied text */
+									alert("Copied the text: " + copyText.value);
+								}
+
+								function copy_link_mobile() {
+									/* Get the text field */
+									var copyText = document.getElementById("link_film_mobile");
 
 									/* Select the text field */
 									copyText.select();
@@ -1106,7 +1131,7 @@
 
 
 		<!-- mobile  -->
-		<div class="content_mobile">
+		<div class="content_mobile d-block d-sm-none">
 			<div class="content_top_mobile">
 				<video id="video_area_mobile" onclick="vidplay()">
 					<source id="source_area_mobile"
@@ -1120,6 +1145,9 @@
 					<div class="nofication_content_mobile">Hãy truy cập PHIMMOI bằng tên miền mới của chúng tôi EPHIMMOI.NET. Xin cám ơn đã ủng hộ.</div>
 					<div class="search_icon">
 						<img src="./img/search_mobile_icon.png" alt="">
+						<form action="/">
+							<input type="text" name="search">
+						</form>
 					</div>
 				</div>
 				<script>
@@ -1192,14 +1220,13 @@
 				</div>
 				<div class="content_content_name_des">
 					<h3>@Hiệp đạo chi mai</h3>
-					<p class="link_full">Link Full Film: http://jsdjsfdhfd</p>
 					<div class="tag_film">
 						#hdjfdffj #jsfnsdjfndj #mfgdjg #hdff #jdhfdf #jfdhf #hdfbf #jsdjsd
 					</div>
 				</div>
 			</div>
 			<div class="content_bottom_mobile">
-				<button>
+				<button class="active">
 					<img src="./img/home_mobile.png" alt="">
 					<p>Trang chủ</p>
 				</button>
@@ -1425,6 +1452,10 @@
 
 				var logo_film_mobile = $('.content_mobile_logo_film img').width();
 				$(".content_mobile_logo_film img").css({ 'height': logo_film_mobile + 'px' });
+
+				$('.search_icon img').click(function() {
+					$('.search_icon form input').toggleClass('active');
+				})
 			})
 		</script>
 		<script>
