@@ -474,6 +474,16 @@
 										alt=""></button>
 							</div>
 						</div>
+						<div class="form-group d-block d-sm-none">
+							<label for="copy_link_mobile">Link</label>
+							<div>
+								<input type="text" class="form-control" name="copy_link_mobile" id="copy_link_mobile"
+									aria-describedby="helpId" placeholder="" value="https://motchill.net/xem-phim.html"
+									disabled>
+								<button class="copy_button" onclick="copy_link_mobile()"><img src="./img/copy_icon.png"
+										alt=""></button>
+							</div>
+						</div>
 					</div>
 					<div class="modal-footer">
 						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -766,6 +776,21 @@
 								function copy_link() {
 									/* Get the text field */
 									var copyText = document.getElementById("link_film");
+
+									/* Select the text field */
+									copyText.select();
+									copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+									/* Copy the text inside the text field */
+									navigator.clipboard.writeText(copyText.value);
+
+									/* Alert the copied text */
+									alert("Copied the text: " + copyText.value);
+								}
+
+								function copy_link_mobile() {
+									/* Get the text field */
+									var copyText = document.getElementById("link_film_mobile");
 
 									/* Select the text field */
 									copyText.select();
@@ -1106,13 +1131,56 @@
 
 
 		<!-- mobile  -->
-		<div class="content_mobile">
+		<div class="content_mobile d-block d-sm-none">
 			<div class="content_top_mobile">
-				<video id="video_area_mibile" width="320" height="240" controls>
+				<video id="video_area_mobile" onclick="vidplay()">
 					<source id="source_area_mobile"
 						src="./film_test/1.mp4"
 						type="video/ogg">
 				</video>
+				<button class="play" id="play">&gt;</button>
+				<progress class="process_bar" id="progressbar" value="0" max="100"></progress>
+
+				<div class="search_form">
+					<div class="nofication_content_mobile">Hãy truy cập PHIMMOI bằng tên miền mới của chúng tôi EPHIMMOI.NET. Xin cám ơn đã ủng hộ.</div>
+					<div class="search_icon">
+						<img src="./img/search_mobile_icon.png" alt="">
+						<form action="/">
+							<input type="text" name="search">
+						</form>
+					</div>
+				</div>
+				<script>
+					var video = document.getElementById("video_area_mibile");
+
+					function vidplay() {
+
+						var button = document.getElementById("play");
+						if (video.paused) {
+							video.play();
+							button.textContent = "||";
+						} else {
+							video.pause();
+							button.textContent = ">";
+						}
+						button.classList.add("show_button_play");
+						setTimeout(() => {
+							button.classList.add("hide_button_play");
+						}, 2000);
+						setTimeout(() => {
+							button.classList.remove("show_button_play");
+							button.classList.remove("hide_button_play");
+						}, 3000);
+					}
+					video.addEventListener('timeupdate', updateProgressBar, false);
+
+
+					function updateProgressBar() {
+						var progressBar = document.getElementById('progressbar');
+						var percentage = (video.currentTime / video.duration) * 100;
+						progressBar.value = percentage.toFixed(2); progressBar.innerHTML = percentage.toFixed(2) + '% played';
+					}
+				</script>
 				<div class="right_content_mobile">
 					<div class="content_mobile_practice">
 						<h4>Tập</h4>
@@ -1138,7 +1206,8 @@
 							<p>17.1k</p>
 						</button>
 						<button>
-							<a href="https://facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/c-mILo5qZjc" target="blank">
+							<a href="https://facebook.com/sharer/sharer.php?u=https://www.youtube.com/embed/c-mILo5qZjc"
+								target="blank">
 								<img src="./img/share_mobile.png" alt="">
 								<p>17.1k</p>
 							</a>
@@ -1151,17 +1220,28 @@
 				</div>
 				<div class="content_content_name_des">
 					<h3>@Hiệp đạo chi mai</h3>
-					<p class="link_full">Link Full Film: http://jsdjsfdhfd</p>
 					<div class="tag_film">
 						#hdjfdffj #jsfnsdjfndj #mfgdjg #hdff #jdhfdf #jfdhf #hdfbf #jsdjsd
 					</div>
 				</div>
 			</div>
 			<div class="content_bottom_mobile">
-				<button>Home</button>
-				<button>Home</button>
-				<button>Home</button>
-				<button>Home</button>
+				<button class="active">
+					<img src="./img/home_mobile.png" alt="">
+					<p>Trang chủ</p>
+				</button>
+				<button>
+					<img src="./img/trending_mobile.png" alt="">
+					<p>Thịnh hành</p>
+				</button>
+				<button>
+					<img src="./img/option_mobile.png" alt="">
+					<p>Thể loại</p>
+				</button>
+				<button>
+					<img src="./img/login_mobile.png" alt="">
+					<p>Đăng nhập</p>
+				</button>
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -1344,6 +1424,17 @@
 					$('.show_list_cop').toggleClass('active');
 				});
 
+				$('.content_top_mobile').scroll(function () {
+					let st = $(this).scrollTop();
+					if (st > lastScrollTop) {
+						$("#source_area_mobile").attr('src', './film_test/_phim công viên kỷ jura 2 _ http___bblink.com_6FZyOr.mp4');
+					} else {
+						$("#source_area_mobile").attr('src', './film_test/_Bộ Tứ Siêu Đẳng đại chiến Người Bạc _ http___bblink.com_Jeljfe5.mp4');
+					};
+					$("#video_area_mobile")[0].load();
+					lastScrollTop = st;
+				});
+
 				$('.left_content').scroll(function () {
 					let st = $(this).scrollTop();
 					if (st > lastScrollTop) {
@@ -1361,6 +1452,10 @@
 
 				var logo_film_mobile = $('.content_mobile_logo_film img').width();
 				$(".content_mobile_logo_film img").css({ 'height': logo_film_mobile + 'px' });
+
+				$('.search_icon img').click(function() {
+					$('.search_icon form input').toggleClass('active');
+				})
 			})
 		</script>
 		<script>
