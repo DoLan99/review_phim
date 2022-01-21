@@ -506,9 +506,7 @@
 								</button>
 								<div class="col-md-8 left_content">
 									<video id="video_area" width="320" height="240" controls>
-										<source id="source_area"
-											src="./film_test/1.mp4"
-											type="video/ogg">
+										<source id="source_area" src="./film_test/1.mp4" type="video/ogg">
 									</video>
 								</div>
 								<div class="col-md-4">
@@ -877,10 +875,24 @@
 										</div>
 									</div>
 									<div class="body_content_item">
-										<iframe src="https://www.youtube.com/embed/c-mILo5qZjc"
+										<div class="advertisement_video">
+											<div class="logo_advertise">
+												<img src="./img/APP-logo-.png" alt="logo">
+											</div>
+											<marquee class="text_run_advertise" direction="left">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis,
+												voluptates omnis, eos aperiam quaerat error quod voluptatibus
+												perferendis aut ratione maiores cumque nihil. Adipisci doloribus et
+												accusamus dolorum numquam.
+											</marquee>
+										</div>
+										<video id="video_area_mobile" onclick="vidplay()">
+											<source id="source_area_mobile" src="./film_test/1.mp4" type="video/ogg">
+										</video>
+										<!-- <iframe src="https://www.yoe.com/embed/c-mILo5qZjc"
 											title="YouTube video player" frameborder="0"
 											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-											allowfullscreen></iframe>
+											allowfullscreen></iframe> -->
 										<div class="right_content_item col-lg-1">
 											<div class="pratice">
 												<h3>Tập</h3>
@@ -1133,16 +1145,26 @@
 		<!-- mobile  -->
 		<div class="content_mobile d-block d-sm-none">
 			<div class="content_top_mobile">
+				<div class="advertisement_video">
+					<div class="logo_advertise">
+						<img src="./img/APP-logo-.png" alt="logo">
+					</div>
+					<marquee class="text_run_advertise" direction="left">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi quis,
+						voluptates omnis, eos aperiam quaerat error quod voluptatibus
+						perferendis aut ratione maiores cumque nihil. Adipisci doloribus et
+						accusamus dolorum numquam.
+					</marquee>
+				</div>
 				<video id="video_area_mobile" onclick="vidplay()">
-					<source id="source_area_mobile"
-						src="./film_test/1.mp4"
-						type="video/ogg">
+					<source id="source_area_mobile" src="./film_test/1.mp4" type="video/ogg">
 				</video>
 				<button class="play" id="play">&gt;</button>
 				<progress class="process_bar" id="progressbar" value="0" max="100"></progress>
 
 				<div class="search_form">
-					<div class="nofication_content_mobile">Hãy truy cập PHIMMOI bằng tên miền mới của chúng tôi EPHIMMOI.NET. Xin cám ơn đã ủng hộ.</div>
+					<div class="nofication_content_mobile">Hãy truy cập PHIMMOI bằng tên miền mới của chúng tôi
+						EPHIMMOI.NET. Xin cám ơn đã ủng hộ.</div>
 					<div class="search_icon">
 						<img src="./img/search_mobile_icon.png" alt="">
 						<form action="/">
@@ -1453,7 +1475,7 @@
 				var logo_film_mobile = $('.content_mobile_logo_film img').width();
 				$(".content_mobile_logo_film img").css({ 'height': logo_film_mobile + 'px' });
 
-				$('.search_icon img').click(function() {
+				$('.search_icon img').click(function () {
 					$('.search_icon form input').toggleClass('active');
 				})
 			})

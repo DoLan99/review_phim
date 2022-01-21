@@ -76,7 +76,7 @@ button:focus {border: none; outline: none;}
 
 .show_content_film .modal-dialog{max-width: 100%;margin: 0;}
 .show_content_film .modal-dialog .modal-content{height: 100vh; overflow-y: scroll;}
-.show_content_film iframe {width: 100%; min-height: 100%; height: 100%;}
+.show_content_film iframe, .body_content_item video {width: 100%; min-height: 100%; height: 100%;}
 .show_content_film .show_content_film_top_title{display: flex; justify-content: space-between; width: 100%;}
 .show_content_film .show_content_film_top_title img {width: 20%;object-fit: cover; object-position: center; height: 60px;}
 .show_content_film .show_content_film_top_title .title_and_dess {width: 40%;}
@@ -153,6 +153,14 @@ button:focus {border: none; outline: none;}
 .content_mobile .search_icon img {width: 20px; float: right; object-fit: cover; object-position: center;}
 .content_mobile .search_icon form input {position: absolute; right: 100%; top: 0; width: 900%; opacity: 0; z-index: -1; transition: all 0.3s ease-in-out;}
 .content_mobile .search_icon form input.active {opacity: 1; z-index: 1;}
+
+.advertisement_video{position: absolute; width: calc(100% - 20px); left: 10px; top: 10px;}
+.content_mobile .advertisement_video {top: 50px; left: 15px; width: calc(100% - 30px);}
+.advertisement_video .logo_advertise, .body_content_item .advertisement_video .text_run_advertise{float: left;}
+.advertisement_video .text_run_advertise{width: calc(100% - 70px); display: flex; justify-content: center; align-items: center; height: 70px;}
+.advertisement_video .logo_advertise img {width: 70px; height: 70px; display: block; border-radius: .25rem; object-fit: cover;}
+.advertisement_video .text_run_advertise{font-size: 20px;}
+.content_mobile .text_run_advertise{color: #fff; font-size: 15px;}
 @media only screen and (max-width: 425px) {
     .edit_modal .modal-dialog{
         min-width: 70%;
