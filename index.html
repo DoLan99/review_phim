@@ -500,6 +500,7 @@
 									<video id="video_area" width="320" height="240" controls>
 										<source id="source_area" src="./film_test/1.mp4" type="video/ogg">
 									</video>
+									<input type="button" class="btn_skip_vid" value="">
 								</div>
 								<div class="col-md-4">
 									<div class="show_content_film_top_title">
@@ -850,8 +851,8 @@
 											<h1>Ăn Cơm Đã, Yêu Để Sau</h1>
 											<a href="">Link Full Film: https://motchill.net/xem-phim/bay-vi...</a>
 											<!-- Button trigger modal -->
-											<button type="button" class="btn btn-primary btn-lg" data-toggle="modal"
-												data-target="#modelId3">
+											<button type="button" class="btn btn-primary btn-lg button_show_modal"
+												data-toggle="modal" data-target="#modelId3">
 												Launch
 											</button>
 											<div class="top_star_hash">
@@ -1402,28 +1403,28 @@
 
 
 		<script>
-			$(document).ready(function () {
-				$('#carouselId').owlCarousel({
-					autoplay: true,
-					autoplayTimeout: 10000,
-					loop: true,
-					margin: 10,
-					responsive: {
-						600: {
-							items: 4
-						}
-					}
-				});
-			});
+			// $(document).ready(function () {
+			// 	$('#carouselId').owlCarousel({
+			// 		autoplay: true,
+			// 		autoplayTimeout: 10000,
+			// 		loop: true,
+			// 		margin: 10,
+			// 		responsive: {
+			// 			600: {
+			// 				items: 4
+			// 			}
+			// 		}
+			// 	});
+			// });
 
 
-			$(document).ready(function () {
-				$('#practice_modal_film').owlCarousel({
-					autoplay: false,
-					margin: 10,
-					items: 10,
-				});
-			});
+			// $(document).ready(function () {
+			// 	$('#practice_modal_film').owlCarousel({
+			// 		autoplay: false,
+			// 		margin: 10,
+			// 		items: 10,
+			// 	});
+			// });
 
 			let lastScrollTop = 0;
 
@@ -1461,6 +1462,37 @@
 					lastScrollTop = st;
 				});
 
+
+				// chạy quảng cáo
+				$(".item_film button.button_show_modal").click(function () {
+					const minute = 1000 * 60;
+					let now = new Date().getTime();
+					$("#source_area").attr('src', './film_test/1.mp4'); // link vid quảng cáo
+					var refreshId = setInterval(function () {
+						let distance = new Date().getTime() - now;
+						let new_time = Math.floor((distance % (1000 * 60)) / 1000);
+						$(".btn_skip_vid").prop("value", "Video sẽ phát sau khoảng " + (6-new_time));
+						if (new_time == 6) {
+							$(".btn_skip_vid").prop("value", "Skip");
+							$('.btn_skip_vid').click(function () {
+								$("#source_area").attr('src', './film_test/2.mp4');
+								$("#video_area")[0].load();
+							});
+							clearInterval(refreshId);
+						}
+					}, 1000)
+
+				});
+
+				// $(".btn_skip_vid").prop("value", "Video sẽ phát sau khoảng " + countDown);
+				// if (index == countDown) {
+				// 	$(".btn_skip_vid").prop("value", "Skip");
+				// 	$('.btn_skip_vid').click(function () {
+				// 		$("#source_area").attr('src', './film_test/2.mp4');
+				// 		$("#video_area")[0].load();
+				// 	});
+				// }
+
 				// design pic
 				var cw = $('.show_list_film img').width();
 				$(".show_list_film img").css({ 'height': cw + 'px' });
@@ -1495,7 +1527,7 @@
 				evt.currentTarget.className += " active";
 			}
 		</script>
-		<script type="text/javascript">
+		<!-- <script type="text/javascript">
 			function close_Catfish() {
 				document.getElementById("catfish").style.display = 'none';
 			}
@@ -1516,7 +1548,7 @@
 			<button style="position: absolute;visibility: visible;top: -15px;margin: 0 0 0 -30px;font-weight: bold;display: inline-block;padding: 4px 6px;color: #FFF;background-color: rgba(0,0,0,0.7);border: 1px solid #FFF;" onclick="close_Catfish();">Đóng</button>`;
 				}
 			});
-		</script>
+		</script> -->
 	</body>
 
 </html>
